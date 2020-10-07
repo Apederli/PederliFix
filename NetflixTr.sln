@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.WebApp", "Netflix.WebApp\Netflix.WebApp.csproj", "{B6179429-1458-4FC2-B5CD-D22C14860FE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.Core", "Netflix.Core\Netflix.Core.csproj", "{5D7EDBF0-1262-4B9D-8891-ED7532446668}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.Bussiness", "Netflix.Bussiness\Netflix.Bussiness.csproj", "{7D98CA34-4F8C-45E9-A4BC-71CDB943AD80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.DataAccess", "Netflix.DataAccess\Netflix.DataAccess.csproj", "{B4BDFEE5-77EB-4B7D-9513-0B9294DCB9CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.Entities", "Netflix.Entities\Netflix.Entities.csproj", "{58CAAB98-8302-48D1-9AEE-2F0B9A7F00C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.WebAdmin", "Netflix.WebAdmin\Netflix.WebAdmin.csproj", "{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6179429-1458-4FC2-B5CD-D22C14860FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6179429-1458-4FC2-B5CD-D22C14860FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6179429-1458-4FC2-B5CD-D22C14860FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6179429-1458-4FC2-B5CD-D22C14860FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D7EDBF0-1262-4B9D-8891-ED7532446668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D7EDBF0-1262-4B9D-8891-ED7532446668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D7EDBF0-1262-4B9D-8891-ED7532446668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D7EDBF0-1262-4B9D-8891-ED7532446668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D98CA34-4F8C-45E9-A4BC-71CDB943AD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D98CA34-4F8C-45E9-A4BC-71CDB943AD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D98CA34-4F8C-45E9-A4BC-71CDB943AD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D98CA34-4F8C-45E9-A4BC-71CDB943AD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BDFEE5-77EB-4B7D-9513-0B9294DCB9CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BDFEE5-77EB-4B7D-9513-0B9294DCB9CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BDFEE5-77EB-4B7D-9513-0B9294DCB9CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BDFEE5-77EB-4B7D-9513-0B9294DCB9CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CAAB98-8302-48D1-9AEE-2F0B9A7F00C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CAAB98-8302-48D1-9AEE-2F0B9A7F00C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CAAB98-8302-48D1-9AEE-2F0B9A7F00C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CAAB98-8302-48D1-9AEE-2F0B9A7F00C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFC03F18-08A2-45C5-85FC-0590BCB47BE7}
+	EndGlobalSection
+EndGlobal

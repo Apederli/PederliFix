@@ -1,0 +1,12 @@
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Core.dll
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csprojAssemblyReference.cache
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.AssemblyInfoInputs.cache
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.AssemblyInfo.cs
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Entities.deps.json
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Entities.dll
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Entities.pdb
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Core.pdb
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csproj.CopyComplete
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.dll
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.pdb
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csproj.CoreCompileInputs.cache

@@ -1,0 +1,75 @@
+﻿@using Netflix.WebAdmin.ViewModel
+ @model MovieListViewModel
+  
+
+@{
+    ViewData["Title"] = "List";
+}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<h1>List</h1>
+<script src="~/js/JsMovieList.js"></script>
+
+<p>
+    <a asp-action="Create">Yeni Film Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie.Summary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie.Director)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie.Banner)
+            </th>
+            <th>
+                <span>Options&nbsp;&nbsp;</span>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Movies)
+        {
+        <tr>
+            @Html.HiddenFor(modelItem => item.Id)
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.Summary) && item.Summary.Length > 35)
+                {
+                    <p>@(item.Summary.Substring(0,35))</p>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+            <td>
+                <img src="~/images/@item.Banner" width="105" height="140" class="img-thumbnail" />
+            </td>
+            <td>
+                <a href="~/Movie/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
+                <a href="~/Movie/Detail/@item.Id"><i title="Edit" class="fas fa-info-circle" style="color:cornflowerblue"></i></a>&nbsp;
+                <a href="~/Movie/Delete/@item.Id"><i title="Edit" class="fas fa-trash" style="color:red"></i></a>
+            </td>
+            <td colspan="3" align="center">
+                <pager list="@Model" asp-controller="Movie" asp-action="List" />
+            </td>
+        </tr>
+
+        }
+
+    </tbody>
+</table>

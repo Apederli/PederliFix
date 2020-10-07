@@ -1,0 +1,9 @@
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.deps.json
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.dll
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csprojAssemblyReference.cache
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.AssemblyInfoInputs.cache
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.AssemblyInfo.cs
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pdb
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csproj.CoreCompileInputs.cache
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.dll
+C:\Users\Aydog\source\repos\NetflixTr\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.pdb
