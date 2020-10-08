@@ -9,6 +9,6 @@ namespace Netflix.WebApp.ViewModel
     public class SeriesMovieViewModel
     {
         public List<Series> Series { get; set; }
-        public Movie  Movie { get; set; }
+        public List<Movie>  Movies { get; set; }
     }
 }

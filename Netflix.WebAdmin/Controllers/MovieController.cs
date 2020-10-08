@@ -25,7 +25,6 @@ namespace Netflix.WebAdmin.Controllers
         public IActionResult List(int page=1, int pageSize=5)
         {
             List<Movie> movieList = _movieService.GetAll();
-            PagedList<Movie> paged = new PagedList<Movie>(movieList, page, pageSize);
             MovieListViewModel movieListViewModel = new MovieListViewModel()
             {
                 Movies = movieList

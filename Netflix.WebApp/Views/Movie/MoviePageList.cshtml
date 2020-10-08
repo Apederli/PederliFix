@@ -1,0 +1,11 @@
+﻿@using Netflix.WebApp.ViewModel
+@model SeriesMovieViewModel
+@{
+    ViewData["Title"] = "MoviePageList";
+}
+
+<h1>MoviePageList</h1>
+@foreach (var item in Model.Movie)
+{
+    @item.Banner
+}
