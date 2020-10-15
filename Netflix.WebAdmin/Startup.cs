@@ -1,17 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Netflix.Bussiness.Abstract;
 using Netflix.Bussiness.Concrete;
+using Netflix.Bussiness.ValidationRules.FluentValidation;
 using Netflix.DataAccess.Abstract;
 using Netflix.DataAccess.Concrete.EntityFreamwork;
+using Netflix.Entities;
+using Netflix.WebAdmin.Models;
+using Netflix.WebAdmin.ViewModel;
 
 namespace Netflix.WebAdmin
 {
@@ -29,7 +30,10 @@ namespace Netflix.WebAdmin
         {
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IMovieDal, EfMovieDal>();
-            services.AddControllersWithViews().AddRazorRuntimeCompilation(); 
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddMvc().AddFluentValidation();
+            services.AddTransient<IValidator<Movie>, MovieValidator>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

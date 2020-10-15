@@ -10,7 +10,7 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=00P31839;Database=Netflix;Trusted_Connection=True;",
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-UKQTDKI\SQLEXPRESS;Database=Netflix;Trusted_Connection=True;",
             options => options.EnableRetryOnFailure());
         }
         public DbSet<Series> Series { get; set; }
