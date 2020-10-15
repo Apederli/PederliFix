@@ -22,3 +22,15 @@ C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Entities\obj\Debug\nets
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csproj.CopyComplete
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.dll
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.pdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Entities.deps.json
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Entities.dll
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Entities.pdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Core.dll
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\bin\Debug\netstandard2.0\Netflix.Core.pdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csprojAssemblyReference.cache
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.AssemblyInfoInputs.cache
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.AssemblyInfo.cs
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.csproj.CopyComplete
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.dll
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Entities\obj\Debug\netstandard2.0\Netflix.Entities.pdb

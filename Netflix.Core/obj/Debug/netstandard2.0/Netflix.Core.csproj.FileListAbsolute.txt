@@ -16,3 +16,17 @@ C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstand
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csproj.CoreCompileInputs.cache
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.dll
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.pdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.deps.json
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.dll
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csprojAssemblyReference.cache
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.AssemblyInfoInputs.cache
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.AssemblyInfo.cs
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.dll
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.pdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pssym
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pspdb
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csproj.CoreCompileInputs.cache
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\touch
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\dependencies.txt
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\postsharp.app.config
