@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Razor.Language.CodeGeneration;
 using Netflix.Bussiness.Abstract;
 using Netflix.Entities;
 using Netflix.WebAdmin.ViewModel;
@@ -13,11 +14,13 @@ namespace Netflix.WebAdmin.Controllers
     {
         private readonly IMovieService _movieService;
         private readonly ICategoryService _categoryService;
+        private readonly IMovieCategoryService _movieCategoryService;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment, ICategoryService categoryService)
+        public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment, ICategoryService categoryService, IMovieCategoryService movieCategoryService)
         {
             _movieService = movieService;
             _categoryService = categoryService;
+            _movieCategoryService = movieCategoryService;
             _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult List()
@@ -32,7 +35,7 @@ namespace Netflix.WebAdmin.Controllers
 
         public IActionResult Create()
         {
-            var categories=_categoryService.GetAll();
+            var categories = _categoryService.GetAll();
             MovieCreateViewModel movieCreate = new MovieCreateViewModel()
             {
                 Categories = categories
@@ -42,7 +45,7 @@ namespace Netflix.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(MovieCreateViewModel movieCreateViewModel)
+        public IActionResult Create(MovieCreateViewModel movieCreateViewModel,int[] Id)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +58,17 @@ namespace Netflix.WebAdmin.Controllers
                     Banner = fileName
                 };
                 _movieService.Add(movie);
+
+                foreach (var id in Id)
+                {
+                    MoviesCategory moviesCategory = new MoviesCategory();
+
+                    moviesCategory.CategoryId = id;
+                    moviesCategory.MovieId = movie.Id;
+
+                    _movieCategoryService.Add(moviesCategory);
+                }
+
                 return RedirectToAction("List");
             }
 
