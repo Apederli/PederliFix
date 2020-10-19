@@ -6493,11 +6493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.WebApp\\Netflix.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
       "projectName": "Netflix.WebApp",
-      "projectPath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.WebApp\\Netflix.WebApp.csproj",
+      "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
       "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.WebApp\\obj\\",
+      "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6513,8 +6513,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.Bussiness\\Netflix.Bussiness.csproj": {
-              "projectPath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.Bussiness\\Netflix.Bussiness.csproj"
+            "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj": {
+              "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj"
             }
           }
         }
@@ -6559,7 +6559,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

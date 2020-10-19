@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dla/rCmaVz9DX10c+Dyk/7xIDZfhuPhs/JYsWKadaWfxtPxd+8tRnMXnxxjvna4KOFOtBpvr6GHRMZWxvg9V1Q==",
+  "dgSpecHash": "pk7ChgBcNr6gycUB2RmxuY+3FXlEJpNt2oWk5awW4SxUeVYEjvORpnPCo/RtsxBmdzHKVUe/5/0uTQXlxHdisg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.Core\\Netflix.Core.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

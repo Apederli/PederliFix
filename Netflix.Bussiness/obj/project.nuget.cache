@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j0Abo52tB8SofElHtSRQk/exgne8Yihn9eGXLBdtW4pYO3MncQggoQf7rXJKCLMu3JJ8m04EGjJugXgYePgn6g==",
+  "dgSpecHash": "s9xUQmSfjN3Zw3vldBSgqgQUAqKCXfhboZ/ZYJ32xsMJovZAgQ1Sz3MkwJK1Gtb74i5+UE3Vg9q3INq2HZcVKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.Bussiness\\Netflix.Bussiness.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

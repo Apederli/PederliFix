@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ycWCdOfka+X+BZzofV20TTEe1CuUVe1TYPouEZmeCUJX27uNUz1PDbEU9IcioT9F3Obkpq1qulaxSm0kAANK2A==",
+  "dgSpecHash": "xp0HfgRwyO7mCEvKX9tqYbOlkyPhebntqZvzjnDcYj766p7LcI/p1Lw32LCyMIiSdFl6DPGWBMrJwks/BIbLiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.8\\microsoft.aspnetcore.http.features.3.1.8.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

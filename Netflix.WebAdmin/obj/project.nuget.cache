@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BbSVHKgzvskcY9WRnh+u5Y248Hqu3z3rYDe2ZjXfEy71W8gz/RRZWMQor3n1cCLbMRKBvAqMgyrudldgoCnF/Q==",
+  "dgSpecHash": "w74CZBUwbnCLl1RrTcAK2WwNzRVjepq/78uVEffEYvKdwYG9mRLl+lJ1QYZq3AdqsmxOsBc2jW51Fd/YHsqTVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\NetflixTr\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
