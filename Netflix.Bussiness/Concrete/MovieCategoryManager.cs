@@ -22,7 +22,8 @@ namespace Netflix.Bussiness.Concrete
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var resul=_moviesCategoryDal.Get(x=>x.Id==id);
+            _moviesCategoryDal.Delete(resul);
         }
 
         public List<MoviesCategory> GetAll()

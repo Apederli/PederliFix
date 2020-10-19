@@ -4,6 +4,7 @@ using Netflix.Entities;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Netflix.Bussiness.ValidationRules.FluentValidation;
 using Netflix.Core.Aspects.PostSharp;
 
@@ -13,9 +14,13 @@ namespace Netflix.Bussiness.Concrete
     public class MovieService : IMovieService
     {
         private IMovieDal _movieDal;
-        public MovieService(IMovieDal movieDal)
+        private ICategoryDal _categoryDal;
+        private IMoviesCategoryDal _moviesCategoryDal;
+        public MovieService(IMovieDal movieDal, IMoviesCategoryDal moviesCategoryDal, ICategoryDal categoryDal)
         {
             _movieDal = movieDal;
+            _moviesCategoryDal = moviesCategoryDal;
+            _categoryDal = categoryDal;
         }
 
         [FluentValidationAspect(typeof(MovieValidator))]
@@ -29,14 +34,21 @@ namespace Netflix.Bussiness.Concrete
         {
             var movie = _movieDal.Get(a => a.Id == id);
             var pahth = Path.Combine(Directory.GetCurrentDirectory(),
-                "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Admin\\wwwroot\\"+movie.Banner);
+                "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\" + movie.Banner);
+            var movieCategory = _moviesCategoryDal.GetList(x => x.MovieId == id);
+            if (movieCategory != null)
+            {
+                foreach (var VARIABLE in movieCategory)
+                {
+                    _moviesCategoryDal.Delete(VARIABLE);
+                }
+            }
+
             if (System.IO.File.Exists(pahth))
             {
                 System.IO.File.Delete(pahth);
-
-                _movieDal.Delete(movie);
             }
-            
+            _movieDal.Delete(movie);
         }
 
         public List<Movie> GetAll()
