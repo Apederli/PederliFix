@@ -8859,19 +8859,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\": {}
+    "C:\\Users\\Aydog\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
       "projectName": "Netflix.WebApp",
-      "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
-      "packagesPath": "C:\\Users\\aydogan.pederli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebApp\\obj\\",
+      "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
+      "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aydogan.pederli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8884,8 +8884,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj": {
-              "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj"
+            "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj": {
+              "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj"
             }
           }
         }
@@ -8934,7 +8934,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
