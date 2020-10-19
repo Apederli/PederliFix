@@ -9,6 +9,6 @@ namespace Netflix.Entities
     {
         public int Id { get; set; }
         public int MovieId { get; set; }
-        public int SeriesId { get; set; }
+        public int CategoryId { get; set; }
     }
 }

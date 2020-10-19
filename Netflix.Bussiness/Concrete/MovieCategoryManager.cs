@@ -11,13 +11,13 @@ namespace Netflix.Bussiness.Concrete
     {
         private IMoviesCategoryDal _moviesCategoryDal;
 
-        public MovieCategoryManager(IMoviesCategoryDal moviesCategory)
+        public MovieCategoryManager(IMoviesCategoryDal moviesCategoryDal)
         {
-            _moviesCategoryDal = moviesCategory;
+            _moviesCategoryDal = moviesCategoryDal;
         }
-        public void Add(MoviesCategory movie)
+        public void Add(MoviesCategory movieCategory)
         {
-            _moviesCategoryDal.Add(movie);
+            _moviesCategoryDal.Add(movieCategory);
         }
 
         public void Delete(int id)
