@@ -14,6 +14,8 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
             options => options.EnableRetryOnFailure());
         }
         public DbSet<Series> Series { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<MoviesCategory> MoviesCategories { get; set; }
         public DbSet<Movie> Movies { get; set; }
         //public DbSet<Admin> Admins { get; set; }
         //public DbSet<Season> Seasons { get; set; }

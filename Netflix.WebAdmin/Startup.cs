@@ -30,9 +30,12 @@ namespace Netflix.WebAdmin
         {
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<IMovieDal, EfMovieDal>();
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+            services.AddTransient<IValidator<Movie>, MovieValidator>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddMvc().AddFluentValidation();
-            services.AddTransient<IValidator<Movie>, MovieValidator>();
+            
 
         }
 
