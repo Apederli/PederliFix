@@ -12,13 +12,15 @@ namespace Netflix.WebAdmin.Controllers
     public class MovieController : Controller
     {
         private readonly IMovieService _movieService;
+        private readonly ICategoryService _categoryService;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment)
+        public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment, ICategoryService categoryService)
         {
             _movieService = movieService;
+            _categoryService = categoryService;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult List(int page = 1, int pageSize = 5)
+        public IActionResult List()
         {
             List<Movie> movieList = _movieService.GetAll();
             MovieListViewModel movieListViewModel = new MovieListViewModel()
@@ -30,7 +32,13 @@ namespace Netflix.WebAdmin.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var categories=_categoryService.GetAll();
+            MovieCreateViewModel movieCreate = new MovieCreateViewModel()
+            {
+                Categories = categories
+            };
+
+            return View(movieCreate);
         }
 
         [HttpPost]
