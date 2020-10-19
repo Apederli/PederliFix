@@ -97,5 +97,7 @@ namespace Netflix.WebAdmin.Controllers
 
             return RedirectToAction("List");
         }
+
+        //github için
     }
 }
