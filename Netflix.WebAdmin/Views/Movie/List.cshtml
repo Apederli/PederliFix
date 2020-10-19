@@ -1,16 +1,14 @@
 ﻿@using Netflix.WebAdmin.ViewModel
- @model MovieListViewModel
-  
+@model MovieListViewModel
 
 @{
     ViewData["Title"] = "List";
 }
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<h1>List</h1>
 <script src="~/js/JsMovieList.js"></script>
 
 <p>
-    <a asp-action="Create">Yeni Film Ekle</a>
+    <a asp-action="Create" class="btn btn-success">Yeni Film Ekle</a>
 </p>
 <table class="table">
     <thead>
@@ -39,37 +37,71 @@
     <tbody>
         @foreach (var item in Model.Movies)
         {
-        <tr>
-            @Html.HiddenFor(modelItem => item.Id)
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @if (!string.IsNullOrEmpty(item.Summary) && item.Summary.Length > 35)
-                {
-                    <p>@(item.Summary.Substring(0,35))</p>
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Director)
-            </td>
-            <td>
-                <img src="~/images/@item.Banner" width="105" height="140" class="img-thumbnail" />
-            </td>
-            <td>
-                <a href="~/Movie/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
-                <a href="~/Movie/Detail/@item.Id"><i title="Edit" class="fas fa-info-circle" style="color:cornflowerblue"></i></a>&nbsp;
-                <a href="~/Movie/Delete/@item.Id"><i title="Edit" class="fas fa-trash" style="color:red"></i></a>
-            </td>
-            <td colspan="3" align="center">
-                <pager list="@Model" asp-controller="Movie" asp-action="List" />
-            </td>
-        </tr>
+            <tr>
+                @Html.HiddenFor(modelItem => item.Id)
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.Summary) && item.Summary.Length > 35)
+                    {
+                        <p>@(item.Summary.Substring(0,35))</p>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Director)
+                </td>
+                <td>
+                    <img src="~/images/@item.Banner" width="105" height="140" class="img-thumbnail" />
+                </td>
+                <td>
+                    <a href="~/Movie/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
+                    <a href="~/Movie/Detail/@item.Id"><i title="Edit" class="fas fa-info-circle" style="color:cornflowerblue"></i></a>&nbsp;
+                    @*<span id="confirmDeleteSpan_@item.Id" style="display: none">
+                            <span>Bu Filmi Silmek istediğinizden eminmisiniz?</span>
+                            <a href="~/Movie/Delete/@item.Id" class="btn btn-success" />Yes</a>
+                            <a href="#" class="btn btn-primary" onclick="confirmDelete('@item.Id', false)">No</a>
+                        </span>*@
+
+                    <!--CONFIRM Modal POPUP-->
+                    <div class="modal" tabindex="-1" role="dialog" id="modalPopup_@item.Id">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">@item.Name</h4>
+                                    <button type="button" class="close" data-dismiss="modal" onclick="confirmDelete('@item.Id', false)" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Bu filmi silmek istediğinizden emin misiniz?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="~/Movie/Delete/@item.Id" class="btn btn-success"> Evet</a>
+                                    <a href="#" class="btn btn-danger" onclick="confirmDelete('@item.Id', false)">Hayır</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span id="deleteSpan_@item.Id">
+                        <a href="#"><i title="Delete" onclick="confirmDelete('@item.Id', true)" class="fas fa-trash" style="color:red"></i></a>
+                    </span>
+                </td>
+                <td colspan="3" align="center">
+                    <pager list="@Model" asp-controller="Movie" asp-action="List" />
+                </td>
+
+            </tr>
 
         }
 
     </tbody>
 </table>
+@section Scripts {
+
+    <script src="~/js/ConfirmJs.js"></script>
+}
