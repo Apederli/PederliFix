@@ -58,7 +58,7 @@ namespace Netflix.Bussiness.Concrete
 
         public List<Movie> GetByCategoryId(int categoryId)
         {
-            throw new NotImplementedException();
+            return _movieDal.GetList();
         }
 
         public void GetById(int id)
