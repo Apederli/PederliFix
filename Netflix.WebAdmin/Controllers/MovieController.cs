@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Razor.Language.CodeGeneration;
 using Netflix.Bussiness.Abstract;
 using Netflix.Entities;
 using Netflix.WebAdmin.ViewModel;
+using System;
+using System.IO;
 
 namespace Netflix.WebAdmin.Controllers
 {
@@ -23,13 +21,31 @@ namespace Netflix.WebAdmin.Controllers
             _movieCategoryService = movieCategoryService;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult List()
+        public IActionResult List(int ?Id)
         {
-            List<Movie> movieList = _movieService.GetAll();
+            var movieList = _movieService.GetAll();
+            var categoryList = _categoryService.GetAll();
+            
+
             MovieListViewModel movieListViewModel = new MovieListViewModel()
             {
-                Movies = movieList
+                Movies = movieList,
+                Categories = categoryList
             };
+
+            if (Id != null)
+            {
+                var result = _categoryService.GetListByCategoryId(Id.Value);
+                var movieListViewModelWithCategory = new MovieListViewModel()
+                {
+                    Movies = result.Movies,
+                    Category = result.Category,
+                    Categories = categoryList
+                };
+                return View(movieListViewModelWithCategory);
+            }
+           
+
             return View(movieListViewModel);
         }
 
@@ -62,10 +78,8 @@ namespace Netflix.WebAdmin.Controllers
                 foreach (var id in Id)
                 {
                     MoviesCategory moviesCategory = new MoviesCategory();
-
                     moviesCategory.CategoryId = id;
                     moviesCategory.MovieId = movie.Id;
-
                     _movieCategoryService.Add(moviesCategory);
                 }
 

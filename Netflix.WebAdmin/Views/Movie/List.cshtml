@@ -9,6 +9,17 @@
 
 <p>
     <a asp-action="Create" class="btn btn-success">Yeni Film Ekle</a>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            TÜRLER
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            @foreach (var item in Model.Categories)
+            {
+             <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
+            }
+        </div>
+    </div>
 </p>
 <table class="table">
     <thead>

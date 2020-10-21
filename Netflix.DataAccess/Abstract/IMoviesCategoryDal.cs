@@ -8,5 +8,6 @@ namespace Netflix.DataAccess.Abstract
 {
     public interface IMoviesCategoryDal : IEntityRepository<MoviesCategory>
     {
+       
     }
 }

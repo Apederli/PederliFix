@@ -13,5 +13,6 @@ namespace Netflix.Bussiness.Abstract
         void Update(MoviesCategory movieCategory);
         void Delete(int id);
         void GetById(int id);
+     
     }
 }

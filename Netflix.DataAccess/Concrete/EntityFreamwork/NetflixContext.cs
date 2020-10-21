@@ -13,6 +13,9 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-UKQTDKI\SQLEXPRESS;Database=Netflix;Trusted_Connection=True;",
             options => options.EnableRetryOnFailure());
         }
+
+       
+
         public DbSet<Series> Series { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<MoviesCategory> MoviesCategory { get; set; }

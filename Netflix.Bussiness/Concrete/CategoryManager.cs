@@ -1,9 +1,13 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Netflix.Bussiness.Abstract;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
+using Netflix.Entities.ComplexTypes;
 
 namespace Netflix.Bussiness.Concrete
 {
@@ -21,10 +25,6 @@ namespace Netflix.Bussiness.Concrete
            return _categoryDal.GetList();
        }
 
-        public List<Category> GetByCategoryId(int categoryId)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Add(Category movie)
         {
@@ -41,9 +41,14 @@ namespace Netflix.Bussiness.Concrete
             throw new NotImplementedException();
         }
 
-        public void GetById(int id)
+        public Category GetById(int id)
         {
             throw new NotImplementedException();
         }
-    }
+
+        public MovieCategoryComplexType GetListByCategoryId(int ?id)
+        {
+           return _categoryDal.GetListByCategoryId(id.Value);
+        }
+   }
 }
