@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ayVaTGtMq2e/CvFQX9e7gIiGRofOqUofoZa204V6VjRV3atX01XqpGctoD0H6PzUW8D9h3V5Lk1ek2GIB8MBjQ==",
+  "dgSpecHash": "R1wJEhfPutAZNET36uz3yJj4LIA2muWE9dV4FPqQqBIjysLSyuR+IyzPeyo7q434QDRpkf/gPeLKqlK2eUZr6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.8\\microsoft.aspnetcore.http.features.3.1.8.nupkg.sha512",

@@ -21,12 +21,10 @@ namespace Netflix.WebAdmin.Controllers
             _movieCategoryService = movieCategoryService;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult List(int ?Id)
+        public IActionResult List(int ? Id)
         {
             var movieList = _movieService.GetAll();
             var categoryList = _categoryService.GetAll();
-            
-
             MovieListViewModel movieListViewModel = new MovieListViewModel()
             {
                 Movies = movieList,
@@ -77,9 +75,11 @@ namespace Netflix.WebAdmin.Controllers
 
                 foreach (var id in Id)
                 {
-                    MoviesCategory moviesCategory = new MoviesCategory();
-                    moviesCategory.CategoryId = id;
-                    moviesCategory.MovieId = movie.Id;
+                    var moviesCategory = new MoviesCategory
+                    {
+                        CategoryId = id,
+                        MovieId = movie.Id
+                    };
                     _movieCategoryService.Add(moviesCategory);
                 }
 
