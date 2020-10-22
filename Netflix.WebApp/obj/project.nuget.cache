@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wyN4uKhJVd1hUKuCWNer9xZYATxTmhvKTF5O/3b0Ge2v3P/NAtfw7tjxwcd0FdpQtdhrrSswuRm2rurUK0yeTA==",
+  "dgSpecHash": "iu2V4EeRozfPdKw0tnFhLlck/Y9dl4nAv48svMfqKMF4YITFcP6efA8GZ7+y/SZSQzJijNyzFfLKlG5hgf+lMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebApp\\Netflix.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\jquery\\1.8.3\\jquery.1.8.3.nupkg.sha512",

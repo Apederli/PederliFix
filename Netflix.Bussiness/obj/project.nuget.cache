@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cwJ5BzxRFhYHmFRuNJ+lxZvv3yaEYhGHmZk37Id4BQRzZr9YemwiwoPkqIUTgSFKtSWcFUP0JgNecYZUs3bZpg==",
+  "dgSpecHash": "Nj3VezSJNFpBJsu6U6J9OrFMxYQNzI05v6Nwv9K7yJgSR7drlggR5T5ueV5/npCRKaq+Suo4/N3wFFc1NM2SHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",

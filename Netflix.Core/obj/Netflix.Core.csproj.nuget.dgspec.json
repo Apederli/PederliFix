@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {}
+    "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
+    "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
         "projectName": "Netflix.Core",
-        "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
+        "projectPath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
         "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\obj\\",
+        "outputPath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
