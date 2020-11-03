@@ -23,7 +23,7 @@ namespace Netflix.Bussiness.Concrete
             _categoryDal = categoryDal;
         }
 
-        [FluentValidationAspect(typeof(MovieValidator))]
+        
         public void Add(Movie movie)
         {
             _movieDal.Add(movie);
@@ -61,9 +61,9 @@ namespace Netflix.Bussiness.Concrete
             return _movieDal.GetList();
         }
 
-        public void GetById(int id)
+        public Movie GetById(int id)
         {
-            _movieDal.Get(a => a.Id == id);
+         return _movieDal.Get(a => a.Id == id);
         }
 
         public void Update(Movie movie)

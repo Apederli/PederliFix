@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sv56FfVI0HsS9+VZZXI+5CwQTtZFCaCO9RwJH0e2VQSw8oDpcSCOJwfUGFDyv8rh0fBpNeGM+eoWxv4nkynWcg==",
+  "dgSpecHash": "v9dNs4ndOBm2A4LtKF/sT710yES59wAsXR4E13PEEnQKRO4RCGlA7ktY/k2ueoNsCLpl/n7CSlzl+PVg36UUUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
+  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
     "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

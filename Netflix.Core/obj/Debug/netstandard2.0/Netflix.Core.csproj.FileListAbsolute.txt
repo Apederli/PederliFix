@@ -26,7 +26,7 @@ C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Net
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.pdb
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pssym
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pspdb
-C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csproj.CoreCompileInputs.cache
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\touch
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\dependencies.txt
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\postsharp.app.config
+C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csproj.CoreCompileInputs.cache

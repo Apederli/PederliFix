@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.DataAccess", "Netfl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.Entities", "Netflix.Entities\Netflix.Entities.csproj", "{58CAAB98-8302-48D1-9AEE-2F0B9A7F00C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.WebAdmin", "Netflix.WebAdmin\Netflix.WebAdmin.csproj", "{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.WebAdmin", "Netflix.WebAdmin\Netflix.WebAdmin.csproj", "{CE9A1982-F135-4E20-B6D5-4AFB5CD0D116}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

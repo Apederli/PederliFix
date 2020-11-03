@@ -7,20 +7,28 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <script src="~/js/JsMovieList.js"></script>
 
-<p>
-    <a asp-action="Create" class="btn btn-success">Yeni Film Ekle</a>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            TÜRLER
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            @foreach (var item in Model.Categories)
-            {
-             <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
-            }
+<link href="~/css/jquery.fancybox.min.css" rel="stylesheet" />
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/js/jquery.fancybox.min.js"></script>
+
+
+<div class="row">
+    <p style="margin-left:initial;">
+        <a asp-action="Create" class="btn btn-success">Yeni Film Ekle</a>
+        <div class="dropdown" style="padding-left: 10px;  ">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                TÜRLER
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach (var item in Model.Categories)
+                {
+                    <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
+                }
+            </div>
         </div>
-    </div>
-</p>
+    </p>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -46,8 +54,10 @@
         </tr>
     </thead>
     <tbody>
+
         @foreach (var item in Model.Movies)
         {
+
             <tr>
                 @Html.HiddenFor(modelItem => item.Id)
                 <td>
@@ -66,11 +76,11 @@
                     @Html.DisplayFor(modelItem => item.Director)
                 </td>
                 <td>
-                    <img src="~/images/@item.Banner" width="105" height="140" class="img-thumbnail" />
+                    <a data-fancybox="gallery" href="~/images/@item.Banner"><img src="~/images/@item.Banner" width="105" height="140" class="img-thumbnail" /></a>
                 </td>
                 <td>
                     <a href="~/Movie/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
-                    <a href="~/Movie/Detail/@item.Id"><i title="Edit" class="fas fa-info-circle" style="color:cornflowerblue"></i></a>&nbsp;
+                    <a href="~/Movie/Detail/@item.Id"><i title="Detail" class="fas fa-info-circle" style="color:cornflowerblue"></i></a>&nbsp;
                     @*<span id="confirmDeleteSpan_@item.Id" style="display: none">
                             <span>Bu Filmi Silmek istediğinizden eminmisiniz?</span>
                             <a href="~/Movie/Delete/@item.Id" class="btn btn-success" />Yes</a>
