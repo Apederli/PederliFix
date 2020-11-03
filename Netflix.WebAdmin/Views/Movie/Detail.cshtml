@@ -1,0 +1,22 @@
+﻿@model Netflix.WebAdmin.ViewModel.MovieListViewModel
+@{
+    ViewData["Title"] = "Detail";
+}
+<link href="~/css/DetailPage.css" rel="stylesheet" />
+<div class="bigBox">
+    <div class="banner">
+        <picture>
+            <img src="/images/@Model.Movie.Banner" width="489" height="749" />
+        </picture>
+    </div>
+    <div class="productSummary">
+    <span>@Model.Movie.Name</span>
+        <ul class="pressli">
+            <li><label asp-for="Movie.Name"></label><h5>@Model.Movie.Name</h5></li>
+            <li><label asp-for="Movie.Summary"></label><p>@Model.Movie.Summary</p></li>
+            <li class="last-item"><label asp-for="Movie.Director"></label><h3>@Model.Movie.Director</h3></li>
+        </ul>
+    </div>
+</div>
+
+

@@ -10,17 +10,17 @@ namespace Netflix.Core.CrossCuttingConcerns.Validation.FluentValidat
 {
     public class ValidatorTool
     {
-        public static void FluentValidate(IValidator validator,object entity)
+        public static void FluentValidate(IValidator validator, object entity)
         {
 
-            ValidationResult result = validator.Validate((IValidationContext) entity);
+            ValidationResult result = validator.Validate((IValidationContext)entity);
 
             if (result.Errors.Count > 0)
             {
-                throw new FluentValidation.ValidationException(result.Errors); 
+                throw new FluentValidation.ValidationException(result.Errors);
             }
 
-           
+
         }
     }
 }

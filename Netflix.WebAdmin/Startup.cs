@@ -40,11 +40,11 @@ namespace Netflix.WebAdmin
 
             services.AddScoped<IMoviesCategoryDal, EfMoviesCategoryDal>();
             
-            services.AddTransient<IValidator<Movie>, MovieValidator>();
+         
             
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             
-            services.AddMvc().AddFluentValidation();
+         
             
 
         }

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "LR3owWZhpzsW6aJppX96XZa2X5tFkKVJRmgHeags5ynehjY3ykIdZuWfaNywA8bovEn7z7XEWUtAZJ/1rVgGfg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation\\9.2.0\\fluentvalidation.9.2.0.nupkg.sha512",
+    "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.2.0\\fluentvalidation.aspnetcore.9.2.0.nupkg.sha512",
+    "C:\\Users\\Aydog\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.2.0\\fluentvalidation.dependencyinjectionextensions.9.2.0.nupkg.sha512",
+    "C:\\Users\\Aydog\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

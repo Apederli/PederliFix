@@ -6423,11 +6423,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
       "projectName": "Netflix.DataAccess",
-      "projectPath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
+      "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6443,8 +6443,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
-              "projectPath": "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj"
+            "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
+              "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj"
             }
           }
         }

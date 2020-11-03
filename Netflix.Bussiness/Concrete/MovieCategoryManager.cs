@@ -40,16 +40,19 @@ namespace Netflix.Bussiness.Concrete
             throw new NotImplementedException();
         }
 
-        public void GetById(int id)
+        public MoviesCategory GetById(int id)
         {
-             _moviesCategoryDal.Get(x => x.CategoryId == id);
+            return _moviesCategoryDal.Get(x => x.CategoryId == id);
         }
 
-      
+        public List<MoviesCategory> GetByMovieId(int id)
+        {
+            return _moviesCategoryDal.GetList(x => x.Id==id);
+        }
 
         public void Update(MoviesCategory movie)
         {
-            throw new NotImplementedException();
+            _moviesCategoryDal.Update(movie);
         }
     }
 }

@@ -1,13 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+﻿using Microsoft.EntityFrameworkCore;
 using Netflix.Core.DataAccess.EntityFreamwork;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
 using Netflix.Entities.ComplexTypes;
+using System.Linq;
 
 namespace Netflix.DataAccess.Concrete.EntityFreamwork
 {
@@ -24,8 +20,12 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
                     .ThenInclude(m => m.Movie)
                     .Select(cat => new { Category = cat, Movie = cat.MoviesCategories.Select(x => x.Movie) }).FirstOrDefault();
                 MovieCategoryComplexType movieCategoryComplexType = new MovieCategoryComplexType();
-                movieCategoryComplexType.Movies = data.Movie;
-                movieCategoryComplexType.Category = data.Category;
+                if (data != null)
+                {
+                    movieCategoryComplexType.Movies = data.Movie;
+                    movieCategoryComplexType.Category = data.Category;
+                }
+
                 return movieCategoryComplexType;
             }
           

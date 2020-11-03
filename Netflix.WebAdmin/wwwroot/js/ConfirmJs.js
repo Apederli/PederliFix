@@ -2,7 +2,7 @@
     var deleteSpan = 'deleteSpan_' + id;
     var modalPopup = 'modalPopup_' + id;
     if (isDeleteClicked) {
-        $('#' + deleteSpan).hide();
+        //$('#' + deleteSpan).hide();
         $('#' + modalPopup).show();
     } else {
         $('#' + deleteSpan).show();

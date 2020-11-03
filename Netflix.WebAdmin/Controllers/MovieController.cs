@@ -4,7 +4,12 @@ using Netflix.Bussiness.Abstract;
 using Netflix.Entities;
 using Netflix.WebAdmin.ViewModel;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNetCore.Http;
+using Netflix.Entities.ComplexTypes;
 
 namespace Netflix.WebAdmin.Controllers
 {
@@ -14,14 +19,17 @@ namespace Netflix.WebAdmin.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IMovieCategoryService _movieCategoryService;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment, ICategoryService categoryService, IMovieCategoryService movieCategoryService)
+
+        public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment,
+            ICategoryService categoryService, IMovieCategoryService movieCategoryService)
         {
             _movieService = movieService;
             _categoryService = categoryService;
             _movieCategoryService = movieCategoryService;
             _webHostEnvironment = webHostEnvironment;
         }
-        public IActionResult List(int ? Id)
+
+        public IActionResult List(int? Id)
         {
             var movieList = _movieService.GetAll();
             var categoryList = _categoryService.GetAll();
@@ -34,15 +42,16 @@ namespace Netflix.WebAdmin.Controllers
             if (Id != null)
             {
                 var result = _categoryService.GetListByCategoryId(Id.Value);
-                var movieListViewModelWithCategory = new MovieListViewModel()
+                MovieListViewModel movieListViewModelWithCategory = new MovieListViewModel()
                 {
                     Movies = result.Movies,
                     Category = result.Category,
                     Categories = categoryList
                 };
+
                 return View(movieListViewModelWithCategory);
             }
-           
+
 
             return View(movieListViewModel);
         }
@@ -59,7 +68,7 @@ namespace Netflix.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(MovieCreateViewModel movieCreateViewModel,int[] Id)
+        public IActionResult Create(MovieCreateViewModel movieCreateViewModel, int[] Id)
         {
             if (ModelState.IsValid)
             {
@@ -89,6 +98,73 @@ namespace Netflix.WebAdmin.Controllers
             return View();
         }
 
+
+
+        public IActionResult Delete(int id)
+        {
+            _movieService.Delete(id);
+
+            return RedirectToAction("List");
+        }
+
+
+        public IActionResult Detail(int id)
+        {
+            MovieListViewModel movie = new MovieListViewModel()
+            {
+                Movie = _movieService.GetById(id)
+            };
+            return View(movie);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var movie = _movieService.GetById(id);
+            var categoryList = _categoryService.GetAll();
+            MovieCreateViewModel movieCreateViewModel = new MovieCreateViewModel()
+            {
+                Id = movie.Id,
+                Name = movie.Name,
+                Summary = movie.Summary,
+                Director = movie.Director,
+                ImagePath = movie.Banner,
+                Categories = categoryList
+
+            };
+
+            return View(movieCreateViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, int[] categoryId, MovieCreateViewModel movieCreateViewModel)
+        {
+            //string pathConbine = Path.Combine(Directory.GetCurrentDirectory(),
+            //    "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\" + movieCreateViewModel.ImagePath);
+            //if (movieCreateViewModel.FormFile != null)
+            //{
+            //    System.IO.File.Delete(pathConbine);
+            //}
+
+            //string fileName = UploadFile(movieCreateViewModel);
+            //Movie movie = _movieService.GetById(id);
+            //movie.Name = movieCreateViewModel.Name;
+            //movie.Summary = movieCreateViewModel.Summary;
+            //movie.Director = movieCreateViewModel.Director;
+            //movie.Banner = fileName;
+            //_movieService.Update(movie);
+
+            //foreach (var IdCategory in categoryId)
+            //{
+            //    var categoryList = new MoviesCategory()
+            //    {
+            //        CategoryId = IdCategory,
+            //        MovieId = movie.Id
+            //    };
+            //    _movieCategoryService.Update(categoryList);
+            //}
+
+            return View();
+        }
         private string UploadFile(MovieCreateViewModel movieCreateViewModel)
         {
             string fileName = null;
@@ -102,16 +178,8 @@ namespace Netflix.WebAdmin.Controllers
                     movieCreateViewModel.FormFile.CopyTo(fileStream);
                 }
             }
+
             return fileName;
         }
-
-        public IActionResult Delete(int id)
-        {
-            _movieService.Delete(id);
-
-            return RedirectToAction("List");
-        }
-
-        //github için
     }
 }
