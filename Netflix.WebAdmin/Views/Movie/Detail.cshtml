@@ -1,4 +1,4 @@
-﻿@model Netflix.WebAdmin.ViewModel.MovieListViewModel
+﻿@model Netflix.WebAdmin.ViewModel.DatailPageViewModel
 @{
     ViewData["Title"] = "Detail";
 }
@@ -11,11 +11,18 @@
     </div>
     <div class="productSummary">
     <span>@Model.Movie.Name</span>
-        <ul class="pressli">
-            <li><label asp-for="Movie.Name"></label><h5>@Model.Movie.Name</h5></li>
-            <li><label asp-for="Movie.Summary"></label><p>@Model.Movie.Summary</p></li>
-            <li class="last-item"><label asp-for="Movie.Director"></label><h3>@Model.Movie.Director</h3></li>
-        </ul>
+    <ul class="pressli">
+        <li><label asp-for="Movie.Name"></label><h5>@Model.Movie.Name</h5></li>
+        <li><label asp-for="Movie.Summary"></label><p>@Model.Movie.Summary</p></li>
+        <li class="last-item"><label asp-for="Movie.Director"></label><h3>@Model.Movie.Director</h3></li>
+       
+            <label asp-for="Categories"></label>
+            @foreach (var item in Model.Categories)
+            {
+                <li>@item.CategoryName</li>
+            }
+        
+    </ul>
     </div>
 </div>
 

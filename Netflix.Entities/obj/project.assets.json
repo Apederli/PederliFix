@@ -364,30 +364,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "PostSharp/6.6.15": {
-        "type": "package",
-        "dependencies": {
-          "PostSharp.Redist": "[6.6.15, 7.0.0)"
-        },
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "build": {
-          "build/_._": {}
-        }
-      },
-      "PostSharp.Redist/6.6.15": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/PostSharp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/PostSharp.dll": {}
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -1758,8 +1734,7 @@
         "dependencies": {
           "FluentValidation": "9.2.2",
           "Microsoft.EntityFrameworkCore": "3.1.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
-          "PostSharp": "6.6.15"
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"
         },
         "compile": {
           "bin/placeholder/Netflix.Core.dll": {}
@@ -2456,62 +2431,6 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
-      ]
-    },
-    "PostSharp/6.6.15": {
-      "sha512": "r1yZe+3RDPCXEYw3xPS+vk7lhi8c3UbuppdmbQLrw3Jy8QVpMYknN6YXQnQO7trYYy99ToyWz8nP4tsphZlOzw==",
-      "type": "package",
-      "path": "postsharp/6.6.15",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "build/PostSharp-Tools.7z",
-        "build/PostSharp.Version.properties",
-        "build/PostSharp.properties",
-        "build/PostSharp.props",
-        "build/PostSharp.targets",
-        "build/PostSharp.tasks",
-        "build/_common/unzipper/SharpCompress.dll",
-        "build/_common/unzipper/System.Runtime.CompilerServices.Unsafe.dll",
-        "build/_common/unzipper/System.Text.Encoding.CodePages.dll",
-        "build/_common/unzipper/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
-        "build/_common/unzipper/unzipper.deps.json",
-        "build/_common/unzipper/unzipper.dll",
-        "build/_common/unzipper/unzipper.exe",
-        "build/_common/unzipper/unzipper.exe.config",
-        "build/_common/unzipper/unzipper.pdb",
-        "build/_common/unzipper/unzipper.runtimeconfig.json",
-        "build/net472/PostSharp.MSBuild.v6.6.15.Release.dll",
-        "build/net472/PostSharp.MSBuild.v6.6.15.Release.pdb",
-        "build/netcoreapp2.1/PostSharp.MSBuild.v6.6.15.Release.dll",
-        "build/netcoreapp2.1/PostSharp.MSBuild.v6.6.15.Release.pdb",
-        "icon.png",
-        "lib/net35-client/_._",
-        "lib/netstandard1.0/_._",
-        "postsharp.6.6.15.nupkg.sha512",
-        "postsharp.nuspec"
-      ]
-    },
-    "PostSharp.Redist/6.6.15": {
-      "sha512": "MSh3ypVQhsykfL86ZX70HW2XSKbCb/qnhnd/gl1391kqoATdcepab2KFbTJzAxkz//OoF2iFLbpJh5AWknFh5g==",
-      "type": "package",
-      "path": "postsharp.redist/6.6.15",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "icon.png",
-        "lib/net35-client/PostSharp.dll",
-        "lib/net35-client/PostSharp.xml",
-        "lib/net45/PostSharp.dll",
-        "lib/net45/PostSharp.xml",
-        "lib/netstandard1.3/PostSharp.dll",
-        "lib/netstandard1.3/PostSharp.xml",
-        "lib/netstandard2.0/PostSharp.dll",
-        "lib/netstandard2.0/PostSharp.xml",
-        "postsharp.redist.6.6.15.nupkg.sha512",
-        "postsharp.redist.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -6398,19 +6317,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aydog\\.nuget\\packages\\": {}
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
       "projectName": "Netflix.Entities",
-      "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
-      "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\obj\\",
+      "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
+      "packagesPath": "C:\\Users\\aydogan.pederli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aydogan.pederli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6423,8 +6342,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
-              "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj"
+            "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
+              "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj"
             }
           }
         }
@@ -6463,7 +6382,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using Netflix.Bussiness.ValidationRules.FluentValidation;
 using Netflix.Core.Aspects.PostSharp;
-
+using Netflix.Entities.ComplexTypes;
 
 namespace Netflix.Bussiness.Concrete
 {
@@ -49,6 +49,11 @@ namespace Netflix.Bussiness.Concrete
                 System.IO.File.Delete(pahth);
             }
             _movieDal.Delete(movie);
+        }
+
+        public MovieCategoryComplexType DetalPage(int id)
+        {
+            return _movieDal.DetalPage(id);
         }
 
         public List<Movie> GetAll()

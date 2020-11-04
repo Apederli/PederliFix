@@ -110,11 +110,13 @@ namespace Netflix.WebAdmin.Controllers
 
         public IActionResult Detail(int id)
         {
-            MovieListViewModel movie = new MovieListViewModel()
+            var result = _movieService.DetalPage(id);
+            DatailPageViewModel datailPage = new DatailPageViewModel()
             {
-                Movie = _movieService.GetById(id)
+                Movie = result.Movie,
+                Categories=result.Categories
             };
-            return View(movie);
+            return View(datailPage);
         }
 
         public IActionResult Edit(int id)

@@ -15,6 +15,5 @@ namespace Netflix.WebAdmin.ViewModel
         public List<Category> Categories { get; set; }
         public Category Category { get; set; }
 
-        public IEnumerable<CategorySelectedViewModel> CategorySelectedViewModels { get; set; }
     }
 }
