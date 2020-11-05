@@ -26,7 +26,7 @@ namespace Netflix.Bussiness.Concrete
        }
 
 
-        public void Add(Category movie)
+        public Category Add(Category movie)
         {
             throw new NotImplementedException();
         }

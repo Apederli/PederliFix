@@ -10,7 +10,7 @@ namespace Netflix.Bussiness.Abstract
     public interface ICategoryService
     {
         List<Category> GetAll();
-        void Add(Category movie);
+        Category Add(Category movie);
         void Update(Category movie);
         void Delete(int id);
         Category GetById(int id);

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Zy72sJlgj/71aViqpy6DfFpSPDImrGZWJcPTwttTAtow/5+3FZt3V76B1bz0XqAM+XQeG6iHhck2cVOUcLNDmQ==",
+  "dgSpecHash": "qhuLgX1Ipr9MOgbBKhd3M9K7p8Itv7/aeoo4ekWGeodJJOzbsVCIrlTciXzrg5M3FF+4TZmnVUujvlR+Rchj9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.8\\microsoft.aspnetcore.http.features.3.1.8.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

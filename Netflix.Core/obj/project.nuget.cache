@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Osk6Lr4jOL8ka98OZYNyNcurrodw4aMFGk1fxCO+iBa3nHWGpfVO8krOkZAXQp9V1Q8Bd1u5gsJJ2KLdF8j5vQ==",
+  "dgSpecHash": "m204lqWmi41CeGZp48NN4CBwvXYGrao/J3MmrUuW3nYtqaI6yf0N3vL6WgNDWcW6JnViFl+Ha4MTjl48qv7VMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

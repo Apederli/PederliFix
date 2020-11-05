@@ -2,8 +2,11 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "FluentValidation/9.2.2": {
+      "FluentValidation/8.6.2": {
         "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
         "compile": {
           "lib/netstandard2.0/FluentValidation.dll": {}
         },
@@ -1805,7 +1808,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "FluentValidation": "9.2.2",
+          "FluentValidation": "8.6.2",
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8"
         },
@@ -1849,17 +1852,21 @@
     }
   },
   "libraries": {
-    "FluentValidation/9.2.2": {
-      "sha512": "Y1TQrSa82i/WWPpXriEkL7uyUyECw3Uvtq66dZ8VC3pwFa9VqnZmeZaJJpz8deKhJQNDgqwU3BSptKTnyjqzuA==",
+    "FluentValidation/8.6.2": {
+      "sha512": "N2vz+f6pAX9AI19hu83U2LJjjc/ETzWGlICVanu3DIG76QhzEu3PR/CQSFBX69PRuBTivrW4jhBzeV7dXIfqyw==",
       "type": "package",
-      "path": "fluentvalidation/9.2.2",
+      "path": "fluentvalidation/8.6.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "fluentvalidation.9.2.2.nupkg.sha512",
+        "fluentvalidation.8.6.2.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net461/FluentValidation.dll",
-        "lib/net461/FluentValidation.xml",
+        "lib/net45/FluentValidation.dll",
+        "lib/net45/FluentValidation.xml",
+        "lib/netstandard1.1/FluentValidation.dll",
+        "lib/netstandard1.1/FluentValidation.xml",
+        "lib/netstandard1.6/FluentValidation.dll",
+        "lib/netstandard1.6/FluentValidation.xml",
         "lib/netstandard2.0/FluentValidation.dll",
         "lib/netstandard2.0/FluentValidation.xml"
       ]
@@ -6507,7 +6514,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "FluentValidation >= 9.2.2",
+      "FluentValidation >= 8.6.2",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
       "NETStandard.Library >= 2.0.3",
@@ -6561,7 +6568,7 @@
         "dependencies": {
           "FluentValidation": {
             "target": "Package",
-            "version": "[9.2.2, )"
+            "version": "[8.6.2, )"
           },
           "Microsoft.AspNetCore.Http": {
             "target": "Package",

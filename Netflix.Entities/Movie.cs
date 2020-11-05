@@ -15,8 +15,6 @@ namespace Netflix.Entities
         public string Summary { get; set; }
         public string Director { get; set; }
         public string Banner { get; set; }
-
         public ICollection<MoviesCategory> MoviesCategories { get; set; }
-
     }
 }

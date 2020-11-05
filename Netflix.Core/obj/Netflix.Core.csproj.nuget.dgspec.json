@@ -40,7 +40,7 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[9.2.2, )"
+              "version": "[8.6.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

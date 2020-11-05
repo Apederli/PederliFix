@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8+bp8zdaFcUkhBqrU119SUOd/W6OT5PA2OAdWrZ+qc5ts8eg5Jq/FWCufFsmQg6OvjfdvJodaXkAFWGuwY+0Tw==",
+  "dgSpecHash": "4I1yPNsVS6lj9nwTnGIQCEn2jc1lIdpFxfLec3svE9QnbodwpdOC6IzOmSRxU3lhvt2xTpo8u7oUXlw50jc9ZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.2.0\\fluentvalidation.aspnetcore.9.2.0.nupkg.sha512",
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.2.0\\fluentvalidation.dependencyinjectionextensions.9.2.0.nupkg.sha512",
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

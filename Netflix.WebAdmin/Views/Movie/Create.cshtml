@@ -1,8 +1,13 @@
-﻿@model Netflix.WebAdmin.ViewModel.MovieCreateViewModel
+﻿@using Netflix.WebAdmin.ViewModel
+@model MovieCreateViewModel
+
 
 @{
     ViewData["Title"] = "Create";
 }
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
 <h1>Create</h1>
 
@@ -13,26 +18,26 @@
         <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label asp-for="Movie.Name" class="control-label"></label>
+                <input asp-for="Movie.Name" class="form-control" />
+                <span asp-validation-for="Movie.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Summary" class="control-label"></label>
-                <textarea asp-for="Summary" class="form-control" ></textarea>
-                <span asp-validation-for="Summary" class="text-danger"></span>
+                <label asp-for="Movie.Summary" class="control-label"></label>
+                <textarea asp-for="Movie.Summary" class="form-control"></textarea>
+                <span asp-validation-for="Movie.Summary" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Director" class="control-label"></label>
-                <input asp-for="Director" class="form-control" />
-                <span asp-validation-for="Director" class="text-danger"></span>
+                <label asp-for="Movie.Director" class="control-label"></label>
+                <input asp-for="Movie.Director" class="form-control" />
+                <span asp-validation-for="Movie.Director" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FormFile " class="control-label"></label>
+                <label asp-for="Movie.Banner " class="control-label"></label>
                 <input asp-for="FormFile" class="form-control" type="file" />
-                <span asp-validation-for="Director" class="text-danger"></span>
+                <span asp-validation-for="FormFile" class="text-danger"></span>
             </div>
-            
+
             @foreach (var item in Model.Categories)
             {
                 <div class="form-check">
@@ -40,9 +45,9 @@
                     <label class="form-check-label" for="exampleCheck1">@item.CategoryName</label>
                 </div>
             }
-        <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-primary" />
-        </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
         </form>
     </div>
 </div>

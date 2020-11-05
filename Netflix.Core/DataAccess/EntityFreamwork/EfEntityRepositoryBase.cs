@@ -10,13 +10,14 @@ namespace Netflix.Core.DataAccess.EntityFreamwork
 {
     public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity> where TEntity: class, IEntity, new() where TContext : DbContext, new()
     {
-        public void Add(TEntity entity)
+        public TEntity Add(TEntity entity)
         {
             using (var context = new TContext())
             {
                 var addedEntity = context.Entry(entity);
                 addedEntity.State = EntityState.Added;
                 context.SaveChanges();
+                return entity;
             }
         }
 

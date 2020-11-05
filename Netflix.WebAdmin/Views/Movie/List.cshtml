@@ -6,26 +6,26 @@
 }
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <script src="~/js/JsMovieList.js"></script>
-
 <link href="~/css/jquery.fancybox.min.css" rel="stylesheet" />
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/jquery.fancybox.min.js"></script>
 
 
-<div class="row">
-    <p style="margin-left:initial;">
-        <a asp-action="Create" class="btn btn-success">Yeni Film Ekle</a>
-        <div class="dropdown" style="padding-left: 10px;  ">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                TÜRLER
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                @foreach (var item in Model.Categories)
-                {
-                    <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
-                }
-            </div>
-        </div>
+<div class="row" style="margin-bottom:10px;padding-right:15px;">
+    <p style="margin-left:auto;">
+        <h6 style="color:orange; margin:auto; padding-right:710px;">CREATE NEW MOVİE</h6>
+         <a asp-action="Create" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true" style="padding-right:2px;"></i>New Movie</a>
+         <div class="dropdown" style="padding-left: 10px;">
+             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <i class="fa fa-list" aria-hidden="true"></i>    TYPES
+             </button>
+             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                 @foreach (var item in Model.Categories)
+                 {
+                     <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
+                 }
+             </div>
+         </div>
     </p>
 </div>
 
@@ -70,6 +70,10 @@
                     @if (!string.IsNullOrEmpty(item.Summary) && item.Summary.Length > 35)
                     {
                         <p>@(item.Summary.Substring(0,35))</p>
+                    }
+                    else
+                    {
+                        <p>@item.Summary</p>
                     }
                 </td>
                 <td>

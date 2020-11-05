@@ -10,6 +10,12 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Http;
 using Netflix.Entities.ComplexTypes;
+using Netflix.Bussiness.ValidationRules.FluentValidation;
+using Netflix.Core.CrossCuttingConcerns.Validation.FluentValidat;
+using FluentValidation.Results;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Razor.Language;
+using System.Reflection;
 
 namespace Netflix.WebAdmin.Controllers
 {
@@ -75,9 +81,9 @@ namespace Netflix.WebAdmin.Controllers
                 string fileName = UploadFile(movieCreateViewModel);
                 Movie movie = new Movie()
                 {
-                    Name = movieCreateViewModel.Name,
-                    Director = movieCreateViewModel.Director,
-                    Summary = movieCreateViewModel.Summary,
+                    Name = movieCreateViewModel.Movie.Name,
+                    Director = movieCreateViewModel.Movie.Director,
+                    Summary = movieCreateViewModel.Movie.Summary,
                     Banner = fileName
                 };
                 _movieService.Add(movie);
@@ -119,23 +125,46 @@ namespace Netflix.WebAdmin.Controllers
             return View(datailPage);
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int id)        
         {
             var movie = _movieService.GetById(id);
             var categoryList = _categoryService.GetAll();
-            MovieCreateViewModel movieCreateViewModel = new MovieCreateViewModel()
+            var movieCategory = _movieCategoryService.GetAll().Where(x => x.MovieId == id).ToList();
+
+
+            MovieEditPageViewModel movieEdit = new MovieEditPageViewModel();
+
+            List<CategoryCheched> result = new List<CategoryCheched>();
+
+            movieEdit.Movie = movie;
+
+            foreach (var item in categoryList)
             {
-                Id = movie.Id,
-                Name = movie.Name,
-                Summary = movie.Summary,
-                Director = movie.Director,
-                ImagePath = movie.Banner,
-                Categories = categoryList
+                var categoryChecked = new CategoryCheched();
 
-            };
+                categoryChecked.Id = item.Id;
 
-            return View(movieCreateViewModel);
+                categoryChecked.CategoryName = item.CategoryName;
+
+
+                foreach (var catId in movieCategory)
+                {
+                    if (item.Id == catId.CategoryId)
+                    {
+                        categoryChecked.IsCheked = true;
+                        
+                    }                    
+                }
+
+                result.Add(categoryChecked);
+            }
+            movieEdit.Categorylist = result;
+
+            return View(movieEdit);
+
         }
+
+
 
         [HttpPost]
         public IActionResult Edit(int id, int[] categoryId, MovieCreateViewModel movieCreateViewModel)
@@ -170,7 +199,7 @@ namespace Netflix.WebAdmin.Controllers
         private string UploadFile(MovieCreateViewModel movieCreateViewModel)
         {
             string fileName = null;
-            if (movieCreateViewModel != null)
+            if (movieCreateViewModel.FormFile != null)
             {
                 string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "images");
                 fileName = DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + "-" + movieCreateViewModel.FormFile.FileName;

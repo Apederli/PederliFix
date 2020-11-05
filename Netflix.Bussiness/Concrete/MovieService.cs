@@ -1,13 +1,12 @@
 ﻿using Netflix.Bussiness.Abstract;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using Netflix.Bussiness.ValidationRules.FluentValidation;
-using Netflix.Core.Aspects.PostSharp;
 using Netflix.Entities.ComplexTypes;
+using Netflix.Core.CrossCuttingConcerns.Validation.FluentValidat;
+using FluentValidation.Results;
 
 namespace Netflix.Bussiness.Concrete
 {
@@ -22,11 +21,12 @@ namespace Netflix.Bussiness.Concrete
             _moviesCategoryDal = moviesCategoryDal;
             _categoryDal = categoryDal;
         }
-
         
-        public void Add(Movie movie)
+        public Movie Add(Movie movie)
         {
-            _movieDal.Add(movie);
+            ValidatorTool.FluentValidate(new MovieValidator(), movie);
+            
+            return _movieDal.Add(movie);
         }
 
 

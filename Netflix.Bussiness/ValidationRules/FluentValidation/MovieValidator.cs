@@ -12,8 +12,8 @@ namespace Netflix.Bussiness.ValidationRules.FluentValidation
     {
         public MovieValidator()
         {
-            RuleFor(x => x.Name).NotNull().WithMessage("Film ismini yazınız.");
-            RuleFor(x => x.Director).NotNull().WithMessage("Yönetmen.");
+            RuleFor(x => x.Name).NotNull();
+            RuleFor(x => x.Director).NotNull();
             RuleFor(x => x.Summary).NotNull();
             RuleFor(x => x.Banner).NotNull();
 

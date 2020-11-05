@@ -1,5 +1,5 @@
 ﻿@using Netflix.WebAdmin.ViewModel
-@model MovieCreateViewModel
+@model MovieEditPageViewModel
 @{
     ViewData["Title"] = "Edit";
 }
@@ -7,41 +7,44 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5">
-            <img  src="~/images/@Model.ImagePath" width="370" height="550" />
+            <img  src="~/images/@Model.Movie.Banner" width="370" height="550" />
         </div>
         <div class="col-md-6">
-            <form asp-action="Edit" enctype="multipart/form-data" asp-route-id="@Model.Id">
+            <form asp-action="Edit" enctype="multipart/form-data" asp-route-id="@Model.Movie.Id">
                 <div class="form-group">
-                    <label asp-for="Name" class="control-label"></label>
-                    <input asp-for="Name" class="form-control" />
+                    <label asp-for="Movie.Name" class="control-label"></label>
+                    <input asp-for="Movie.Name" class="form-control" />
+                    <span asp-validation-for="Movie.Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Summary" class="control-label"></label>
-                    <textarea asp-for="Summary" class="form-control" rows="7"></textarea>
+                    <label asp-for="Movie.Summary" class="control-label"></label>
+                    <textarea asp-for="Movie.Summary" class="form-control" rows="7"></textarea>
+                    <span asp-validation-for="Movie.Summary" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Director" class="control-label"></label>
-                    <input asp-for="Director" class="form-control" />
+                    <label asp-for="Movie.Director" class="control-label"></label>
+                    <input asp-for="Movie.Director" class="form-control" />
+                    <span asp-validation-for="Movie.Director" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label class="control-label">Banner</label>
                     <input asp-for="FormFile" class="form-control" type="file" />
                     <span asp-validation-for="FormFile" class="text-danger"></span>
                 </div>
-                @foreach (var item in Model.Categories)
+                @foreach (var item in Model.Categorylist)
                 {
                     
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" asp-for="Category" value="@item.Id" name="categoryId" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" asp-for="@item.IsCheked" value="@item.Id" name="categoryId" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">@item.CategoryName</label>
                     </div>
                 }
-                <div class="modal" tabindex="-1" role="dialog" id="modalPopup_@Model.Id">
+                <div class="modal" tabindex="-1" role="dialog" id="modalPopup_@Model.Movie.Id">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title">@Model.Name</h4>
-                                <button type="button" class="close" data-dismiss="modal" onclick="confirmDelete('@Model.Id', false)" aria-label="Close">
+                                <h4 class="modal-title">@Model.Movie.Name</h4>
+                                <button type="button" class="close" data-dismiss="modal" onclick="confirmDelete('@Model.Movie.Id', false)" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -49,14 +52,14 @@
                                 <p>Değişiklikler Kayıt Edilsin mi?</p>
                             </div>
                             <div class="modal-footer">
-                                <input href="~/Movie/Edit/@Model.Id" class="btn btn-success" type="submit" value="Update"/>
-                                <a href="#" class="btn btn-danger" onclick="confirmDelete('@Model.Id', false)">Hayır</a>
+                                <input href="~/Movie/Edit/@Model.Movie.Id" class="btn btn-success" type="submit" value="Update"/>
+                                <a href="#" class="btn btn-danger" onclick="confirmDelete('@Model.Movie.Id', false)">Hayır</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <span id="deleteSpan_@Model.Id">
-                    <a onclick="confirmDelete('@Model.Id', true)" class="btn btn-success">Update</a>
+                <span id="deleteSpan_@Model.Movie.Id">
+                    <a onclick="confirmDelete('@Model.Movie.Id', true)" class="btn btn-success">Update</a>
                 </span>
             </form>
         </div>

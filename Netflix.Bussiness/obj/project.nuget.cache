@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bXq40q9rWBIZ3zvf67iszPI6u0VXl46LWRrr4R8NIcM0PR3aeTfkjEO5wd2JpWUC/mINB6diIbJtlKPLzx2M/A==",
+  "dgSpecHash": "RFrlQ8EwggBkObjmD2+9Nr1CZhj3UKe+1ZnQLZdxVBWECmYlnkiqkaF56ZouyDIOLIO7199nXF18DQZXFrxoog==",
   "success": true,
   "projectFilePath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\aydogan.pederli\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.8\\microsoft.aspnetcore.http.features.3.1.8.nupkg.sha512",
