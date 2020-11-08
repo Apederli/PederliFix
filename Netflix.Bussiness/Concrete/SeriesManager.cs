@@ -16,9 +16,9 @@ namespace Netflix.Bussiness.Concrete
             _seriesDal = seriesDal;
         }
 
-        public void Add(Series series)
+        public Series Add(Series series)
         {
-            _seriesDal.Add(series);
+           return _seriesDal.Add(series);
         }
 
         public void Delete(int id)

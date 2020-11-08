@@ -11,8 +11,6 @@ using Netflix.Bussiness.ValidationRules.FluentValidation;
 using Netflix.DataAccess.Abstract;
 using Netflix.DataAccess.Concrete.EntityFreamwork;
 using Netflix.Entities;
-using Netflix.WebAdmin.Models;
-using Netflix.WebAdmin.ViewModel;
 
 namespace Netflix.WebAdmin
 {
@@ -29,10 +27,23 @@ namespace Netflix.WebAdmin
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IMovieService, MovieService>();
+
             services.AddScoped<IMovieDal, EfMovieDal>();
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddMvc().AddFluentValidation();
+            
+            services.AddScoped<ICategoryService, CategoryManager>();
+            
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+
+            services.AddScoped<IMovieCategoryService, MovieCategoryManager>();
+
+            services.AddScoped<IMoviesCategoryDal, EfMoviesCategoryDal>();
+
             services.AddTransient<IValidator<Movie>, MovieValidator>();
+            
+            services.AddControllersWithViews().AddRazorRuntimeCompilation().AddFluentValidation();
+            
+         
+            
 
         }
 

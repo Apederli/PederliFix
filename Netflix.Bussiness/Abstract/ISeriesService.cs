@@ -9,7 +9,7 @@ namespace Netflix.Bussiness.Abstract
     {
         List<Series> GetAll();
         List<Series> GetByCategoryId(int categoryId);
-        void Add(Series series);
+        Series Add(Series series);
         void Update(Series series);
         void Delete(int id);
         void GetById(int id);
