@@ -1,2 +1,0 @@
-C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\PostSharp.Compiler.Engine.dll
-C:\Users\Aydog\Source\Repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\PostSharp\postsharp.config

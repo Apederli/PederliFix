@@ -867,7 +867,6 @@ C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\bin\Debug\netcoreapp3.1\
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.csproj.CoreCompileInputs.cache
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\bin\Debug\netcoreapp3.1\PostSharp.dll
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Detail.cshtml.g.cs
 C:\Users\Aydog\Source\Repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Edit.cshtml.g.cs
 C:\Users\aydogan.pederli\source\repos\PederliFix2\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.csprojAssemblyReference.cache

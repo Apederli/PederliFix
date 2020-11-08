@@ -2,7 +2,7 @@
 @model MovieEditPageViewModel
 @{
     ViewData["Title"] = "Edit";
-}
+}  
 <h6 style="text-align: center; color: orange">EDIT</h6>
 <div class="container">
     <div class="row">
@@ -10,7 +10,9 @@
             <img  src="~/images/@Model.Movie.Banner" width="370" height="550" />
         </div>
         <div class="col-md-6">
-            <form asp-action="Edit" enctype="multipart/form-data" asp-route-id="@Model.Movie.Id">
+            <form asp-action="Edit" enctype="multipart/form-data">
+                @*asp-route-id="@Model.Movie.Id"*@
+                @Html.HiddenFor(x => x.Movie.Id)
                 <div class="form-group">
                     <label asp-for="Movie.Name" class="control-label"></label>
                     <input asp-for="Movie.Name" class="form-control" />
@@ -33,7 +35,7 @@
                 </div>
                 @foreach (var item in Model.Categorylist)
                 {
-                    
+
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" asp-for="@item.IsCheked" value="@item.Id" name="categoryId" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">@item.CategoryName</label>
@@ -52,7 +54,7 @@
                                 <p>Değişiklikler Kayıt Edilsin mi?</p>
                             </div>
                             <div class="modal-footer">
-                                <input href="~/Movie/Edit/@Model.Movie.Id" class="btn btn-success" type="submit" value="Update"/>
+                                <input href="~/Movie/Edit/@Model.Movie.Id" class="btn btn-success" type="submit" value="Update" />
                                 <a href="#" class="btn btn-danger" onclick="confirmDelete('@Model.Movie.Id', false)">Hayır</a>
                             </div>
                         </div>

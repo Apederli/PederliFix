@@ -6344,19 +6344,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\": {}
+    "C:\\Users\\Aydog\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
       "projectName": "Netflix.DataAccess",
-      "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\aydogan.pederli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\Netflix.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aydogan.pederli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6369,8 +6369,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
-              "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj"
+            "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
+              "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj"
             }
           }
         }
@@ -6409,8 +6409,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.DataAccess\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
