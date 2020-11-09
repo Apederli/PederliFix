@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {}
+    "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
+    "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
+        "projectUniqueName": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
         "projectName": "Netflix.Core",
-        "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
-        "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\obj\\",
+        "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj",
+        "packagesPath": "C:\\Users\\aydogan.pederli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aydogan.pederli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,17 +71,17 @@
         }
       }
     },
-    "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
+    "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
         "projectName": "Netflix.Entities",
-        "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
-        "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Entities\\obj\\",
+        "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj",
+        "packagesPath": "C:\\Users\\aydogan.pederli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aydogan.pederli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,8 +94,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
-                "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj"
+              "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj": {
+                "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Core\\Netflix.Core.csproj"
               }
             }
           }

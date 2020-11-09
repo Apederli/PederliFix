@@ -7,15 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using Microsoft.AspNetCore.Http;
-using Netflix.Entities.ComplexTypes;
-using Netflix.Bussiness.ValidationRules.FluentValidation;
-using Netflix.Core.CrossCuttingConcerns.Validation.FluentValidat;
-using FluentValidation.Results;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Razor.Language;
-using System.Reflection;
 
 namespace Netflix.WebAdmin.Controllers
 {
@@ -38,33 +29,37 @@ namespace Netflix.WebAdmin.Controllers
         public IActionResult List(int? Id)
         {
             var movieList = _movieService.GetAll();
+
             var categoryList = _categoryService.GetAll();
-            MovieListViewModel movieListViewModel = new MovieListViewModel()
-            {
-                Movies = movieList,
-                Categories = categoryList
-            };
+
+            MovieListViewModel getMovieListByCategoryId = new MovieListViewModel();
 
             if (Id != null)
             {
                 var result = _categoryService.GetListByCategoryId(Id.Value);
-                MovieListViewModel movieListViewModelWithCategory = new MovieListViewModel()
-                {
-                    Movies = result.Movies,
-                    Category = result.Category,
-                    Categories = categoryList
-                };
 
-                return View(movieListViewModelWithCategory);
+                getMovieListByCategoryId.Movies = result.Movies;
+
+                getMovieListByCategoryId.Category = result.Category;
+
+                getMovieListByCategoryId.Categories = categoryList;
+
+            }
+            else
+            {
+                getMovieListByCategoryId.Movies = movieList;
+
+                getMovieListByCategoryId.Categories = categoryList;
             }
 
-
-            return View(movieListViewModel);
+            return View(getMovieListByCategoryId);
         }
+
 
         public IActionResult Create()
         {
             var categories = _categoryService.GetAll();
+
             MovieCreateViewModel movieCreate = new MovieCreateViewModel()
             {
                 Categories = categories
@@ -72,6 +67,7 @@ namespace Netflix.WebAdmin.Controllers
 
             return View(movieCreate);
         }
+        
 
         [HttpPost]
         public IActionResult Create(MovieCreateViewModel movieCreateViewModel, int[] Id)
@@ -79,23 +75,30 @@ namespace Netflix.WebAdmin.Controllers
             if (ModelState.IsValid)
             {
                 string fileName = UploadFile(movieCreateViewModel);
+
                 Movie movie = new Movie()
                 {
                     Name = movieCreateViewModel.Movie.Name,
+
                     Director = movieCreateViewModel.Movie.Director,
+
                     Summary = movieCreateViewModel.Movie.Summary,
+
                     Banner = fileName
                 };
+
                 _movieService.Add(movie);
-                
+
                 foreach (var id in Id)
                 {
-                    
+
                     var moviesCategory = new MoviesCategory
                     {
                         CategoryId = id,
+
                         MovieId = movie.Id
                     };
+
                     _movieCategoryService.Add(moviesCategory);
                 }
 
@@ -118,18 +121,23 @@ namespace Netflix.WebAdmin.Controllers
         public IActionResult Detail(int id)
         {
             var result = _movieService.DetalPage(id);
+
             DatailPageViewModel datailPage = new DatailPageViewModel()
             {
                 Movie = result.Movie,
+
                 Categories = result.Categories
             };
+
             return View(datailPage);
         }
 
         public IActionResult Edit(int id)
         {
             var movie = _movieService.GetById(id);
+
             var categoryList = _categoryService.GetAll();
+
             var movieCategory = _movieCategoryService.GetAll().Where(x => x.MovieId == id).ToList();
 
 
@@ -169,50 +177,54 @@ namespace Netflix.WebAdmin.Controllers
 
 
         [HttpPost]
-        public IActionResult Edit(int[] categoryId,MovieEditPageViewModel movieView)
+        public IActionResult Edit(int[] categoryId, MovieEditPageViewModel movieView)
         {
             var editedMovie = _movieService.GetById(movieView.Movie.Id);
-            var pahth = Path.Combine(Directory.GetCurrentDirectory(),
-                "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\" +
-                editedMovie.Banner);
 
-           
+            var pahth = Path.Combine(Directory.GetCurrentDirectory(), "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\" +
+                editedMovie.Banner);
 
             string fileName = EditFile(movieView);
 
+
             editedMovie.Id = movieView.Movie.Id;
+
             editedMovie.Name = movieView.Movie.Name;
+
             editedMovie.Summary = movieView.Movie.Summary;
+
             editedMovie.Director = movieView.Movie.Director;
+
+
             if (movieView.FormFile != null)
             {
                 System.IO.File.Delete(pahth);
+
                 editedMovie.Banner = fileName;
             }
-           
+
 
             var movieCategory = _movieCategoryService.GetAll().Where(x => x.MovieId == editedMovie.Id).ToList();
 
             _movieService.Update(editedMovie);
 
-           
-
+            // TODO: Update MovieCategory   => Gökhan Çınar => Önce MovieCategoydeki tüm verileri MovieId ye göre Sildim, sonra yeni gelen categoryleri movieCategory Tablosuna Tekrar Ekledim
             foreach (var item in movieCategory)
             {
-                foreach (var catId in categoryId)
-                {
-                    if (catId != item.CategoryId)
-                    {
-                        MoviesCategory moviesCategory = new MoviesCategory()
-                        {
-                            CategoryId = catId,
-                            MovieId = editedMovie.Id
-                        };
-                        _movieCategoryService.Add(moviesCategory);
-                    }
-                }
+                _movieCategoryService.Delete(item.Id);
             }
-            return View();
+
+            foreach (var catId in categoryId)
+            {
+                var result = new MoviesCategory()
+                {
+                    CategoryId = catId,
+                    MovieId = editedMovie.Id
+                };
+                _movieCategoryService.Add(result);
+
+            }
+            return RedirectToAction("List");
         }
 
         private string UploadFile(MovieCreateViewModel movieCreateViewModel)
@@ -242,7 +254,7 @@ namespace Netflix.WebAdmin.Controllers
                 string filePath = Path.Combine(uploadDir, fileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    movieEdit.FormFile.CopyTo(fileStream); 
+                    movieEdit.FormFile.CopyTo(fileStream);
                 }
             }
 

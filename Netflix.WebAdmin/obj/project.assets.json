@@ -8977,23 +8977,24 @@
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
       "Netflix.Bussiness >= 1.0.0",
+      "Netflix.Entities >= 1.0.0",
       "PagedList.Core.Mvc >= 3.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aydog\\.nuget\\packages\\": {}
+    "C:\\Users\\aydogan.pederli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
+      "projectUniqueName": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
       "projectName": "Netflix.WebAdmin",
-      "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
-      "packagesPath": "C:\\Users\\Aydog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebAdmin\\obj\\",
+      "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebAdmin\\Netflix.WebAdmin.csproj",
+      "packagesPath": "C:\\Users\\aydogan.pederli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.WebAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aydog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aydogan.pederli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9006,8 +9007,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj": {
-              "projectPath": "C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj"
+            "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj": {
+              "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Bussiness\\Netflix.Bussiness.csproj"
+            },
+            "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj": {
+              "projectPath": "C:\\Users\\aydogan.pederli\\source\\repos\\PederliFix\\Netflix.Entities\\Netflix.Entities.csproj"
             }
           }
         }
@@ -9059,13 +9063,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Aydog\\Source\\Repos\\PederliFix\\Netflix.WebAdmin\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

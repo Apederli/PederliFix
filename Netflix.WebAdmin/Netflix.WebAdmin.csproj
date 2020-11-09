@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Netflix.Bussiness\Netflix.Bussiness.csproj" />
+    <ProjectReference Include="..\Netflix.Entities\Netflix.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
