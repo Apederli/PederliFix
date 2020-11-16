@@ -5,40 +5,45 @@
 }
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Summary</th>
-            <th scope="col">Director</th>
-            <th scope="col">Category Pieceses</th>
-            <th scope="col">Banner</th>
-            <th scope="col">Edit</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Serieses)
-        {
-        <tr>
-            <th scope="row">@item.Id</th>
-            <td>@item.Name</td>
-            <td id="tdSummary">@item.Summary </td>
-            <td>@item.Director</td>
-            <td>@Model.PiecesOfCategory</td>
-            <td><img src="~/images/Series/@item.Banner" width="100" height="100" /></td>
-            <td>
-                <a href="/Series/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
-                <a href="/Series/Delete/@item.Id"><i title="Delete" class="fas fa-trash-alt" style="color:red"></i></a>&nbsp;
-                <a href="Detail/@item.Id"><i title="Detail" class="fas fa-info" style="color:cornflowerblue"></i></a>
-            </td>
-        </tr>
+<div class="row">
 
-        }
+    <div style="margin-bottom:5px">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-info">Bact to List</a>
+        <a asp-controller="Series" asp-action="Create" class="btn btn-success">Yeni Bir Dizi Oluştur</a>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Summary</th>
+                <th scope="col">Director</th>
+                <th scope="col">Category Pieceses</th>
+                <th scope="col">Banner</th>
+                <th scope="col">Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Serieses)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td><a href="#">@item.Name</a></td>
+                    <td id="tdSummary">@item.Summary </td>
+                    <td>@item.Director</td>
+                    <td>@Model.PiecesOfCategory</td>
+                    <td><img src="~/images/Series/@item.Banner" width="100" height="100" /></td>
+                    <td>
+                        <a href="/Series/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
+                        <a href="/Series/Delete/@item.Id"><i title="Delete" class="fas fa-trash-alt" style="color:red"></i></a>&nbsp;
+                        <a href="Detail/@item.Id"><i title="Detail" class="fas fa-info" style="color:cornflowerblue"></i></a>
+                    </td>
+                </tr>
+            }
 
-    </tbody>
-    <a asp-action="List">Bact to List</a>
-</table>
+        </tbody>
+    </table>
+</div>
 
 <script>
 

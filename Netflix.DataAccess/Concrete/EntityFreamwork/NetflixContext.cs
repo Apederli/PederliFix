@@ -20,10 +20,8 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
         public DbSet<Category> Categories { get; set; }
         public DbSet<MoviesCategory> MoviesCategory { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        //public DbSet<Admin> Admins { get; set; }
-        //public DbSet<Season> Seasons { get; set; }
-        //public DbSet<Chapter> Chapters { get; set; }
-        //public DbSet<Category> Categories { get; set; }
+        public DbSet<Chapter> Chapters { get; set; }
+        public DbSet<Season> Seasons { get; set; }
 
 
     }

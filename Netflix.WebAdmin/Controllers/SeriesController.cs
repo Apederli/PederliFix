@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Netflix.Bussiness.Abstract;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
@@ -21,15 +22,19 @@ namespace Netflix.WebAdmin.Controllers
         private readonly ICategoryService _categoryService;
         private readonly ISeriesCategoryService _seriesCategoryService;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly ISeasonService _seasonService;
+        private readonly IChapterService _chapterService;
 
         ImagesUpload images = new ImagesUpload();
 
-        public SeriesController(ISeriesService seriesService, ICategoryService categoryService, ISeriesCategoryService seriesCategoryService, IWebHostEnvironment webHostEnvironment)
+        public SeriesController(ISeriesService seriesService, ICategoryService categoryService, ISeriesCategoryService seriesCategoryService, IWebHostEnvironment webHostEnvironment, ISeasonService seasonService, IChapterService chapterService)
         {
             _seriesService = seriesService;
             _categoryService = categoryService;
             _seriesCategoryService = seriesCategoryService;
             _webHostEnvironment = webHostEnvironment;
+            _seasonService = seasonService;
+            _chapterService = chapterService;
         }
 
         public IActionResult List(int? id)
@@ -121,6 +126,28 @@ namespace Netflix.WebAdmin.Controllers
                 _seriesCategoryService.Add(seriesCategory);
             }
 
+            Season season = new Season()
+            {
+                
+                Name = seriesCreatListViewModel.Season.Name,
+
+                Title = seriesCreatListViewModel.Season.Title,
+
+                SeriesId= series.Id
+            };
+            _seasonService.Add(season);
+
+            Chapter chapter = new Chapter()
+            {
+                Name = seriesCreatListViewModel.Chapter.Name,
+
+                Topic = seriesCreatListViewModel.Chapter.Topic,
+
+                SeriesId = series.Id,
+
+                SeasonId = season.Id
+            };
+            _chapterService.Add(chapter);
 
             return RedirectToAction("List");
         }
@@ -212,6 +239,23 @@ namespace Netflix.WebAdmin.Controllers
             }
 
             return RedirectToAction("List");
+        }
+
+        public IActionResult Detail(int Id)
+        {
+            var series = _seriesService.GetById(Id);
+
+            var chapters = _chapterService.GetListBySeriesId(Id);
+
+            var seasons = _seasonService.GetbySeriesId(Id);
+            SeriesDetailViewModel seriesDetailViewModel = new SeriesDetailViewModel()
+            {
+                Series=series,
+                Seasons=seasons,
+                Chapters=chapters
+            };
+
+            return View(seriesDetailViewModel);
         }
 
         public IActionResult Delete (int Id)

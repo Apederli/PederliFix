@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Netflix.DataAccess.Concrete.EntityFreamwork
 {
-    public class EfChapterDal : EfEntityRepositoryBase<Chapter,NetflixContext>,IChapter
+    public class EfChapterDal : EfEntityRepositoryBase<Chapter,NetflixContext>,IChapterDal
     {
     }
 }

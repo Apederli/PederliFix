@@ -15,8 +15,6 @@ namespace Netflix.Entities
         public string Director { get; set; }
         public string Banner { get; set; }
         public ICollection<SeriesCategory> SeriesCategory { get; set; }
-
-
         [NotMapped]
         public IFormFile FormFile  { get; set; }
     }

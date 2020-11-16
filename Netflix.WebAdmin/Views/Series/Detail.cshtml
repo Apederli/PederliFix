@@ -1,0 +1,23 @@
+﻿@model Netflix.WebAdmin.ViewModel.SeriesDetailViewModel
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <img width="100" height="100" src="~/images/Series/@Model.Series.Banner"/>
+    </div>
+    <div class="col-md-4">
+      <tr>
+          <th>@Model.Series.Name</th>
+          <th>@Model.Series.Summary</th>
+      </tr>
+    </div>
+</div>
+
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

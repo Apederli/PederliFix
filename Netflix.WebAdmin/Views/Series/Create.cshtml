@@ -8,49 +8,75 @@
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
 <hr />
-<div class="col-md-12">
-    <form asp-action="Create" enctype="multipart/form-data">
-        <div class="row">
-            <div class="col-md-6">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Series.Name" class="control-label"></label>
-                    <input asp-for="Series.Name" class="form-control" />
-                    <span asp-validation-for="Series.Name" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Series.Summary" class="control-label"></label>
-                    <input asp-for="Series.Summary" class="form-control" />
-                    <span asp-validation-for="Series.Summary" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Series.Director" class="control-label"></label>
-                    <input asp-for="Series.Director" class="form-control" />
-                    <span asp-validation-for="Series.Director" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Series.Banner" class="control-label"></label>
-                    <input asp-for="Series.FormFile" class="form-control" type="file" />
-                    <span asp-validation-for="Series.FormFile" class="text-danger"></span>
-                </div>
-
-            </div>
-            <div class="col-md-6">
-                @foreach (var item in Model.Categories)
-                {
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="@item.Id" name="categoryId">
-                        <label asp-for="Categories" class="form-check-label" for="defaultCheck1">@item.CategoryName</label>
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Dizi</h4>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Series.Name" class="control-label"></label>
+                        <input asp-for="Series.Name" class="form-control" />
+                        <span asp-validation-for="Series.Name" class="text-danger"></span>
                     </div>
-                }
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <div class="form-group">
+                        <label asp-for="Series.Summary" class="control-label"></label>
+                        <textarea asp-for="Series.Summary" class="form-control"></textarea>
+                        <span asp-validation-for="Series.Summary" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Series.Director" class="control-label"></label>
+                        <input asp-for="Series.Director" class="form-control" />
+                        <span asp-validation-for="Series.Director" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Series.Banner" class="control-label"></label>
+                        <input asp-for="Series.FormFile" class="form-control" type="file" />
+                        <span asp-validation-for="Series.FormFile" class="text-danger"></span>
+                    </div>
 
                 </div>
+                <div class="col-md-6">
+                    <h4>Kategoriler</h4>
+                    @foreach (var item in Model.Categories)
+                    {
+
+                <div class="form-check" style="padding:5px; margin-left:20px">
+                    <input class="form-check-input" type="checkbox" value="@item.Id" name="categoryId">
+                    <label asp-for="Categories" class="form-check-label" for="defaultCheck1">@item.CategoryName</label>
+                </div>
+                    }
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h4>Sezon</h4>
+                        <select asp-for="Season.Name" asp-items="@( new SelectList(Model.selectFirstSeason,"","Text"))" class="form-control"></select>
+                        <span asp-validation-for="Season.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Season.Title"></label>
+                        <textarea asp-for="Season.Title" class="form-control"></textarea>
+                        <span asp-validation-for="Season.Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Bölüm</h4>
+                    <div class="form-group">
+                        <select asp-for="Chapter.Name" asp-items="@( new SelectList(Model.selectFirstChapter,"","Text"))" class="form-control"></select>
+                        <span asp-validation-for="Chapter.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Chapter.Topic"></label>
+                        <textarea class="form-control" asp-for="Chapter.Topic"></textarea>
+                        <span asp-validation-for="Chapter.Topic" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </form>
-    <div>
-        <a asp-controller="Home" asp-action="Index">Back to List</a>
+            <div class="form-group" style="float:right">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-controller="Series" asp-action="List" class="btn btn-info">Back to List</a>
+            </div>
+        </form>
     </div>
 </div>

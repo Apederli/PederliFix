@@ -43,11 +43,23 @@ namespace Netflix.WebAdmin
 
             services.AddScoped<ISeriesService, SeriesManager>();
 
+            services.AddScoped<ISeasonDal, EfSeasonDal>();
+
+            services.AddScoped<ISeasonService, SeasonManager>();
+
+            services.AddScoped<IChapterService, ChapterManager>();
+
+            services.AddScoped<IChapterDal, EfChapterDal>();
+
             services.AddScoped<ISeriesCategoryService, SeriesCategoryManager>();
 
             services.AddScoped<ISeriesCategoryDal, EfSeriesCategoryDal>();
 
             services.AddTransient<IValidator<Movie>, MovieValidator>();
+
+            services.AddTransient<IValidator<Chapter>, ChapterValidator>();
+
+            services.AddTransient<IValidator<Season>, SeasonValidator>();
 
             services.AddTransient<IValidator<Series>, SeriesValidator>();
 
