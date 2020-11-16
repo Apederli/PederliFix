@@ -50,5 +50,10 @@ namespace Netflix.Bussiness.Concrete
         {
            return _categoryDal.GetListByCategoryId(id.Value);
         }
-   }
+
+        public SeriesCategoryComplexType GetListSeriesByCategoryId(int? id)
+        {
+            return _categoryDal.GetListSeriesByCategoryId(id.Value);
+        }
+    }
 }

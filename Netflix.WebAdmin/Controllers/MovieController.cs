@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Netflix.Bussiness.Abstract;
 using Netflix.Entities;
+using Netflix.WebAdmin.Utilities;
 using Netflix.WebAdmin.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Netflix.WebAdmin.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IMovieCategoryService _movieCategoryService;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        
 
         public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment,
             ICategoryService categoryService, IMovieCategoryService movieCategoryService)
@@ -179,6 +181,7 @@ namespace Netflix.WebAdmin.Controllers
         [HttpPost]
         public IActionResult Edit(int[] categoryId, MovieEditPageViewModel movieView)
         {
+
             var editedMovie = _movieService.GetById(movieView.Movie.Id);
 
             var pahth = Path.Combine(Directory.GetCurrentDirectory(), "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\" +
@@ -208,7 +211,6 @@ namespace Netflix.WebAdmin.Controllers
 
             _movieService.Update(editedMovie);
 
-            // TODO: Update MovieCategory   => Gökhan Çınar => Önce MovieCategoydeki tüm verileri MovieId ye göre Sildim, sonra yeni gelen categoryleri movieCategory Tablosuna Tekrar Ekledim
             foreach (var item in movieCategory)
             {
                 _movieCategoryService.Delete(item.Id);
@@ -226,18 +228,22 @@ namespace Netflix.WebAdmin.Controllers
             }
             return RedirectToAction("List");
         }
-
+        
         private string UploadFile(MovieCreateViewModel movieCreateViewModel)
         {
             string fileName = null;
+
             if (movieCreateViewModel.FormFile != null)
             {
                 string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+
                 fileName = DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + "-" + movieCreateViewModel.FormFile.FileName;
+
                 string filePath = Path.Combine(uploadDir, fileName);
+
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    movieCreateViewModel.FormFile.CopyTo(fileStream);
+                     movieCreateViewModel.FormFile.CopyTo(fileStream);
                 }
             }
 
@@ -250,8 +256,11 @@ namespace Netflix.WebAdmin.Controllers
             if (movieEdit.FormFile != null)
             {
                 string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "images");
+
                 fileName = DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + "-" + movieEdit.FormFile.FileName;
+
                 string filePath = Path.Combine(uploadDir, fileName);
+
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     movieEdit.FormFile.CopyTo(fileStream);
@@ -260,5 +269,6 @@ namespace Netflix.WebAdmin.Controllers
 
             return fileName;
         }
+
     }
 }

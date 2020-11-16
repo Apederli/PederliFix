@@ -16,7 +16,6 @@ namespace Netflix.Bussiness.ValidationRules.FluentValidation
             RuleFor(x => x.Director).NotNull();
             RuleFor(x => x.Summary).NotNull();
             RuleFor(x => x.Banner).NotNull();
-
         }
     }
 }

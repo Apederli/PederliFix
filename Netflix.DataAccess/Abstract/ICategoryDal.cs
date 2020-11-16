@@ -10,5 +10,7 @@ namespace Netflix.DataAccess.Abstract
     public interface ICategoryDal : IEntityRepository<Category>
     {
         MovieCategoryComplexType GetListByCategoryId(int ?id);
+
+        SeriesCategoryComplexType GetListSeriesByCategoryId(int? id);
     }
 }

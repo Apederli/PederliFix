@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Netflix.DataAccess.Concrete.EntityFreamwork
 {
-    public class EfSeriesCategoryDal : EfEntityRepositoryBase<SeriesCategory,NetflixContext>,ISeriesCategory
+    public class EfSeriesCategoryDal : EfEntityRepositoryBase<SeriesCategory,NetflixContext>,ISeriesCategoryDal
     {
     }
 }

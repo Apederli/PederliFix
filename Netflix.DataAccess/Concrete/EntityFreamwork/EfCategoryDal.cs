@@ -31,25 +31,23 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
           
         }
 
-
-
-        public MovieCategoryComplexType forEdit(int id)
+        public SeriesCategoryComplexType GetListSeriesByCategoryId(int? id)
         {
             using (NetflixContext db = new NetflixContext())
             {
-                var data = db
-                    .Movies
-                    .Where(x => x.Id == id)
-                    .Include(mc => mc.MoviesCategories)
-                    .ThenInclude(c => c.Category)
-                    .Select(x => new { Movie = x, Category = x.MoviesCategories.Select(c => c.Category) }).FirstOrDefault();
+                var data = db.Categories.Where(c => c.Id == id).Include(x => x.SeriesCategory).ThenInclude(s => s.Series)
+                    .Select(cat => new { Category = cat, Series = cat.SeriesCategory.Select(x => x.Series) }).FirstOrDefault();
+                SeriesCategoryComplexType seriesCategoryComplex = new SeriesCategoryComplexType();
 
-                MovieCategoryComplexType movieCategoryComplexType = new MovieCategoryComplexType();
-                movieCategoryComplexType.Movie = data.Movie;
-                movieCategoryComplexType.Categories = data.Category;
-                return movieCategoryComplexType;
-            };
+                if(data != null)
+                {
+                    seriesCategoryComplex.Category = data.Category;
+                    seriesCategoryComplex.Serieses = data.Series;
+                }
 
+                return seriesCategoryComplex;
+                
+            }
         }
     }
 }

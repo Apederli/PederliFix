@@ -16,5 +16,7 @@ namespace Netflix.Bussiness.Abstract
         Category GetById(int id);
 
         MovieCategoryComplexType GetListByCategoryId(int ?id);
+
+        SeriesCategoryComplexType GetListSeriesByCategoryId(int? id);
     }
 }

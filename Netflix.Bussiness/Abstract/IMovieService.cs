@@ -14,7 +14,6 @@ namespace Netflix.Bussiness.Abstract
         void Update(Movie movie);
         void Delete(int id);
         Movie GetById(int id);
-
         MovieCategoryComplexType DetalPage(int id);
 
     }

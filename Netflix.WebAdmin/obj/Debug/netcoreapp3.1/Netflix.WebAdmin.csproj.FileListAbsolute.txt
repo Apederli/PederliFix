@@ -1745,3 +1745,6 @@ C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netc
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.dll
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.pdb
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Netflix.WebAdmin.genruntimeconfig.cache
+C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Series\List.cshtml.g.cs
+C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Series\Create.cshtml.g.cs
+C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.WebAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Series\Edit.cshtml.g.cs

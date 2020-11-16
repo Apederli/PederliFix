@@ -10,5 +10,10 @@ namespace Netflix.WebAdmin.ViewModel
         public int Id { get; set; }
         public string CategoryName { get; set; }
         public bool IsCheked { get; set; }
+
+        public CategoryCheched()
+        {
+            IsCheked = false;
+        }
     }
 }

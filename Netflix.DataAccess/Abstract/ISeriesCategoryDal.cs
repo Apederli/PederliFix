@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Netflix.DataAccess.Abstract
 {
-    public interface ISeriesCategory : IEntityRepository<SeriesCategory>
+    public interface ISeriesCategoryDal : IEntityRepository<SeriesCategory>
     {
     }
 }

@@ -28,7 +28,6 @@ C:\Users\aydogan.pederli\source\repos\PederliFix2\Netflix.Core\obj\Debug\netstan
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.deps.json
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.dll
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\bin\Debug\netstandard2.0\Netflix.Core.pdb
-C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csprojAssemblyReference.cache
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.AssemblyInfoInputs.cache
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.AssemblyInfo.cs
 C:\Users\aydogan.pederli\source\repos\PederliFix\Netflix.Core\obj\Debug\netstandard2.0\Netflix.Core.csproj.CoreCompileInputs.cache

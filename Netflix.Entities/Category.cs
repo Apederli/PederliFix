@@ -12,5 +12,7 @@ namespace Netflix.Entities
 
         public ICollection<MoviesCategory> MoviesCategories { get; set; }
 
+        public ICollection<SeriesCategory> SeriesCategory { get; set; }
+
     }
 }

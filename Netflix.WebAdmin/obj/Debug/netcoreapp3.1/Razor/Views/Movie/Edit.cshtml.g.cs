@@ -34,7 +34,7 @@ using Netflix.WebAdmin.ViewModel;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bf6c482e9e7da9cdd1013d10b4892e7d0283ad7f", @"/Views/Movie/Edit.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5d6a230885accc884e651838643a43d858f4269f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"50cbcf494661abecf8ace14546acd3740169db2c", @"/Views/_ViewImports.cshtml")]
     public class Views_Movie_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<MovieEditPageViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("width", new global::Microsoft.AspNetCore.Html.HtmlString("370"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

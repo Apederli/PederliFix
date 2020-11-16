@@ -29,6 +29,7 @@ namespace Netflix.Bussiness.Concrete
             return _movieDal.Add(movie);
         }
 
+       
 
         public void Delete(int id)
         {

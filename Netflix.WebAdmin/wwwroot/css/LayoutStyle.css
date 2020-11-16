@@ -1,0 +1,11 @@
+﻿.logg {
+    width: 50px;
+    height: 50px;
+    background: red;
+    transition: width 1s, height 1s, transform 0s;
+}
+
+    .logg:hover {
+        width: 60px;
+        height:60px;
+    }

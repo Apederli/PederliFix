@@ -1,5 +1,6 @@
 ﻿@using Netflix.WebAdmin.ViewModel
 @model MovieListViewModel
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     ViewData["Title"] = "List";
@@ -13,19 +14,33 @@
 
 <div class="row" style="margin-bottom:10px;padding-right:15px;">
     <p style="margin-left:auto;">
-        <h6 style="color:orange; margin:auto; padding-right:710px;">CREATE NEW MOVİE</h6>
-         <a asp-action="Create" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true" style="padding-right:2px;"></i>New Movie</a>
-         <div class="dropdown" style="padding-left: 10px;">
-             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <i class="fa fa-list" aria-hidden="true"></i>    TYPES
-             </button>
-             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                 @foreach (var item in Model.Categories)
-                 {
-                     <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
-                 }
-             </div>
-         </div>
+        <h6 style="color:orange; margin:auto; padding-right:250px;">CREATE NEW MOVİE</h6>
+
+        <!--Movie Name Search textbox-->
+        <form method="post" asp-action="AutoComplate">
+            <input type="text" id="txtMovie" name="Name" />
+
+            <input type="hidden" id="hdnMovie" name="Id" />
+
+            <input type="submit" class="btn btn-info" value="Submit" style="margin-right:200px;" />
+        
+        </form>
+
+        <a asp-action="Create" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true" style="padding-right:2px;"></i>New Movie</a>
+
+        <div class="dropdown" style="padding-left: 10px;">
+
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                <i class="fa fa-list" aria-hidden="true"></i>    TYPES
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach (var item in Model.Categories)
+                {
+                    <a class="dropdown-item" href="\Movie\List\@item.Id">@item.CategoryName</a>
+                }
+            </div>
+        </div>
     </p>
 </div>
 
@@ -80,7 +95,7 @@
                     @Html.DisplayFor(modelItem => item.Director)
                 </td>
                 <td>
-                    <a data-fancybox="gallery" href="~/images/@item.Banner"><img src="~/images/@item.Banner" width="105" height="140" class="img-thumbnail" /></a>
+                    <a data-fancybox="gallery" href="~/images/@item.Banner"><img src="~/images/@item.Banner" width="105" height="100" class="img-thumbnail" /></a>
                 </td>
                 <td>
                     <a href="~/Movie/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
@@ -130,3 +145,4 @@
 
     <script src="~/js/ConfirmJs.js"></script>
 }
+
