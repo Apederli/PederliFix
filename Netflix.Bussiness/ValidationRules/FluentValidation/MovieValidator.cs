@@ -1,10 +1,5 @@
 ﻿using FluentValidation;
-using FluentValidation.Results;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Netflix.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Netflix.Bussiness.ValidationRules.FluentValidation
 {

@@ -29,14 +29,22 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <td><a href="#">@item.Name</a></td>
-                    <td id="tdSummary">@item.Summary </td>
+                    @if (item.Summary.Length <= 20)
+                    {
+                        <td>@item.Summary</td>
+                    }
+                    else
+                    {
+                        <td>@item.Summary.Substring(0, 20)</td>
+                    }
+
                     <td>@item.Director</td>
                     <td>@Model.PiecesOfCategory</td>
                     <td><img src="~/images/Series/@item.Banner" width="100" height="100" /></td>
                     <td>
                         <a href="/Series/Edit/@item.Id"><i title="Edit" class="fas fa-edit" style="color:coral"></i></a>&nbsp;
                         <a href="/Series/Delete/@item.Id"><i title="Delete" class="fas fa-trash-alt" style="color:red"></i></a>&nbsp;
-                        <a href="Detail/@item.Id"><i title="Detail" class="fas fa-info" style="color:cornflowerblue"></i></a>
+                        <a href="/Series/Detail/@item.Id"><i title="Detail" class="fas fa-info" style="color:cornflowerblue"></i></a>
                     </td>
                 </tr>
             }
@@ -44,29 +52,6 @@
         </tbody>
     </table>
 </div>
-
-<script>
-
-    $(function () {
-        var summary = document.getElementById('tdSummary').innerHTML;
-
-        var sub = summary.substring(0, 50);
-
-        $("#tdSummary").text(sub);
-
-        $("#tdSummary").append("<a href='#' id='readMore'>&nbsp;read more</a>");
-
-        $('#readMore').click(function () {
-
-            $("#tdSummary").text(summary);
-            $("#tdSummary").append("<a href='#' id='readMore'>&nbsp;read more</a>");
-
-        });
-
-    });
-
-</script>
-
 
 
 

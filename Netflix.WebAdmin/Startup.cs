@@ -11,7 +11,6 @@ using Netflix.Bussiness.ValidationRules.FluentValidation;
 using Netflix.DataAccess.Abstract;
 using Netflix.DataAccess.Concrete.EntityFreamwork;
 using Netflix.Entities;
-using Newtonsoft.Json.Serialization;
 
 namespace Netflix.WebAdmin
 {
@@ -30,9 +29,9 @@ namespace Netflix.WebAdmin
             services.AddScoped<IMovieService, MovieService>();
 
             services.AddScoped<IMovieDal, EfMovieDal>();
-            
+
             services.AddScoped<ICategoryService, CategoryManager>();
-            
+
             services.AddScoped<ICategoryDal, EfCategoryDal>();
 
             services.AddScoped<IMovieCategoryService, MovieCategoryManager>();
@@ -64,7 +63,7 @@ namespace Netflix.WebAdmin
             services.AddTransient<IValidator<Series>, SeriesValidator>();
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation().AddFluentValidation();
-          
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

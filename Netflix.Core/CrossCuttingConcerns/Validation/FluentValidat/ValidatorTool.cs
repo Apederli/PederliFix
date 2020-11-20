@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using FluentValidation.Resources;
 using FluentValidation.Results;
 
 namespace Netflix.Core.CrossCuttingConcerns.Validation.FluentValidat

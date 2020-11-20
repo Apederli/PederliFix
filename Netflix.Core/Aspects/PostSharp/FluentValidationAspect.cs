@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using FluentValidation;
-using Netflix.Core.CrossCuttingConcerns.Validation.FluentValidat;
-
-
-namespace Netflix.Core.Aspects.PostSharp
+﻿namespace Netflix.Core.Aspects.PostSharp
 {
     public class FluentValidationAspect// : OnMethodBoundaryAspect
     {
@@ -27,6 +18,6 @@ namespace Netflix.Core.Aspects.PostSharp
         //    }
         //}
 
-     
+
     }
 }

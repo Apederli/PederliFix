@@ -1,5 +1,3 @@
-using System;
-
 namespace Netflix.WebAdmin.Models
 {
     public class ErrorViewModel

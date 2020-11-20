@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Netflix.Bussiness.Abstract;
 using Netflix.Entities;
 using Netflix.WebApp.ViewModel;
+using System.Collections.Generic;
 
 namespace Netflix.WebApp.Controllers
 {

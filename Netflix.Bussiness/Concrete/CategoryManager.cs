@@ -1,29 +1,26 @@
 ﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using Netflix.Bussiness.Abstract;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
 using Netflix.Entities.ComplexTypes;
+using System;
+using System.Collections.Generic;
 
 namespace Netflix.Bussiness.Concrete
 {
-   public class CategoryManager :ICategoryService
-   {
-       public ICategoryDal _categoryDal;
+    public class CategoryManager : ICategoryService
+    {
+        public ICategoryDal _categoryDal;
 
-       public CategoryManager(ICategoryDal categoryDal)
-       {
-           _categoryDal = categoryDal;
-       }
+        public CategoryManager(ICategoryDal categoryDal)
+        {
+            _categoryDal = categoryDal;
+        }
 
-       public List<Category> GetAll()
-       {
-           return _categoryDal.GetList();
-       }
+        public List<Category> GetAll()
+        {
+            return _categoryDal.GetList();
+        }
 
 
         public Category Add(Category movie)
@@ -46,9 +43,9 @@ namespace Netflix.Bussiness.Concrete
             throw new NotImplementedException();
         }
 
-        public MovieCategoryComplexType GetListByCategoryId(int ?id)
+        public MovieCategoryComplexType GetListByCategoryId(int? id)
         {
-           return _categoryDal.GetListByCategoryId(id.Value);
+            return _categoryDal.GetListByCategoryId(id.Value);
         }
 
         public SeriesCategoryComplexType GetListSeriesByCategoryId(int? id)

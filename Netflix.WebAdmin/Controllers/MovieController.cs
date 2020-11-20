@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Netflix.Bussiness.Abstract;
 using Netflix.Entities;
-using Netflix.WebAdmin.Utilities;
 using Netflix.WebAdmin.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace Netflix.WebAdmin.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IMovieCategoryService _movieCategoryService;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        
+
 
         public MovieController(IMovieService movieService, IWebHostEnvironment webHostEnvironment,
             ICategoryService categoryService, IMovieCategoryService movieCategoryService)
@@ -69,7 +68,7 @@ namespace Netflix.WebAdmin.Controllers
 
             return View(movieCreate);
         }
-        
+
 
         [HttpPost]
         public IActionResult Create(MovieCreateViewModel movieCreateViewModel, int[] Id)
@@ -228,7 +227,7 @@ namespace Netflix.WebAdmin.Controllers
             }
             return RedirectToAction("List");
         }
-        
+
         private string UploadFile(MovieCreateViewModel movieCreateViewModel)
         {
             string fileName = null;
@@ -243,7 +242,7 @@ namespace Netflix.WebAdmin.Controllers
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                     movieCreateViewModel.FormFile.CopyTo(fileStream);
+                    movieCreateViewModel.FormFile.CopyTo(fileStream);
                 }
             }
 

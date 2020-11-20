@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 
 namespace Netflix.WebAdmin.Utilities
 {
     public class ImagesUpload
     {
-        public string UploadImages(string webRootPath,string imageClassPath, IFormFile formfile)
+        public string UploadImages(string webRootPath, string imageClassPath, IFormFile formfile)
         {
             string fileName = null;
             if (formfile != null)
@@ -27,7 +23,7 @@ namespace Netflix.WebAdmin.Utilities
 
                 }
             }
-            
+
 
             return fileName;
         }

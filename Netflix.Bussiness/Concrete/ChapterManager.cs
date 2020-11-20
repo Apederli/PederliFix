@@ -1,27 +1,44 @@
 ﻿using Netflix.Bussiness.Abstract;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
-using System;
+using Netflix.Entities.ComplexTypes;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
 
 namespace Netflix.Bussiness.Concrete
 {
     public class ChapterManager : IChapterService
     {
         private IChapterDal _chapterDal;
+        private ISeasonDal _seasonDal;
 
-        public ChapterManager(IChapterDal chapterDal)
+        public ChapterManager(IChapterDal chapterDal, ISeasonDal seasonDal)
         {
             _chapterDal = chapterDal;
+            _seasonDal = seasonDal;
         }
 
-        public Chapter Add(Chapter season)
+        public Chapter AddToSeason(SeasonChapterComplexType seasonChapterComplexType)
         {
-           return _chapterDal.Add(season);
+            var chapters = _chapterDal.GetList();
+            Chapter chapter = _chapterDal.Get(x => x.Name == seasonChapterComplexType.ChapterName);
+            if (!chapters.Contains(chapter))
+            {
+                return _chapterDal.Add(chapter);
+            }
+
+             throw new System.NotImplementedException(); 
         }
+
+        public Chapter Add(Chapter chapter)
+        {
+
+            Chapter _chapter = _chapterDal.Add(chapter);
+
+            return _chapter;
+        }
+
+        
 
         public void Delete(int id)
         {

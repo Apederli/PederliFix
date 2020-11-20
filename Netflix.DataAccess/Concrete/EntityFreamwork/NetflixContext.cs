@@ -1,12 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Netflix.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Netflix.DataAccess.Concrete.EntityFreamwork
 {
-    public class NetflixContext :DbContext
+    public class NetflixContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -14,7 +11,7 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
             options => options.EnableRetryOnFailure());
         }
 
-       
+
 
         public DbSet<Series> Series { get; set; }
         public DbSet<Category> Categories { get; set; }

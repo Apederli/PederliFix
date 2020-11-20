@@ -3,14 +3,11 @@ using Netflix.Core.DataAccess.EntityFreamwork;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
 using Netflix.Entities.ComplexTypes;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Netflix.DataAccess.Concrete.EntityFreamwork
 {
-    public class EfMovieDal :EfEntityRepositoryBase<Movie,NetflixContext>,IMovieDal
+    public class EfMovieDal : EfEntityRepositoryBase<Movie, NetflixContext>, IMovieDal
     {
 
         public MovieCategoryComplexType DetalPage(int id)

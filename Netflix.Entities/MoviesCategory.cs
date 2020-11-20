@@ -1,7 +1,4 @@
 ﻿using Netflix.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Netflix.Entities
 {
@@ -12,7 +9,7 @@ namespace Netflix.Entities
         public int MovieId { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }
-   
-   
+
+
     }
 }

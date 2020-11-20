@@ -4,11 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace Netflix.Core.DataAccess.EntityFreamwork
 {
-    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity> where TEntity: class, IEntity, new() where TContext : DbContext, new()
+    public class EfEntityRepositoryBase<TEntity, TContext> : IEntityRepository<TEntity> where TEntity : class, IEntity, new() where TContext : DbContext, new()
     {
         public TEntity Add(TEntity entity)
         {
@@ -44,9 +43,9 @@ namespace Netflix.Core.DataAccess.EntityFreamwork
         {
             using (var context = new TContext())
             {
-                return  filter == null
-                    ?context.Set<TEntity>().ToList()
-                    :context.Set<TEntity>().Where(filter).ToList();
+                return filter == null
+                    ? context.Set<TEntity>().ToList()
+                    : context.Set<TEntity>().Where(filter).ToList();
             }
         }
 

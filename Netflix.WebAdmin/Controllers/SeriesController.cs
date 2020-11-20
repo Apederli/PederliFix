@@ -1,18 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Netflix.Bussiness.Abstract;
+using Netflix.Entities;
+using Netflix.Entities.ComplexTypes;
+using Netflix.WebAdmin.Utilities;
+using Netflix.WebAdmin.ViewModel;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Netflix.Bussiness.Abstract;
-using Netflix.DataAccess.Abstract;
-using Netflix.Entities;
-using Netflix.WebAdmin.Utilities;
-using Netflix.WebAdmin.ViewModel;
 
 namespace Netflix.WebAdmin.Controllers
 {
@@ -128,12 +123,12 @@ namespace Netflix.WebAdmin.Controllers
 
             Season season = new Season()
             {
-                
+
                 Name = seriesCreatListViewModel.Season.Name,
 
                 Title = seriesCreatListViewModel.Season.Title,
 
-                SeriesId= series.Id
+                SeriesId = series.Id
             };
             _seasonService.Add(season);
 
@@ -190,12 +185,12 @@ namespace Netflix.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(SeriesEditDetailViewModel seriesEditDetailViewModel,int[] seriesCategoryId)
+        public IActionResult Edit(SeriesEditDetailViewModel seriesEditDetailViewModel, int[] seriesCategoryId)
         {
 
             Series series = _seriesService.GetById(seriesEditDetailViewModel.Series.Id);
 
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\Series"+ seriesEditDetailViewModel.Series.Banner);
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "C:\\Users\\Aydog\\source\\repos\\PederliFix\\Netflix.WebAdmin\\wwwroot\\images\\Series" + seriesEditDetailViewModel.Series.Banner);
 
             series.Name = seriesEditDetailViewModel.Series.Name;
 
@@ -203,9 +198,9 @@ namespace Netflix.WebAdmin.Controllers
 
             series.Director = seriesEditDetailViewModel.Series.Director;
 
-            if(seriesEditDetailViewModel.Series.FormFile != null)
+            if (seriesEditDetailViewModel.Series.FormFile != null)
             {
-                if(seriesEditDetailViewModel.Series.Banner != null)
+                if (seriesEditDetailViewModel.Series.Banner != null)
                 {
                     System.IO.File.Delete(path);
                 }
@@ -218,7 +213,7 @@ namespace Netflix.WebAdmin.Controllers
 
             _seriesService.Update(series);
 
-            if(seriesCategoryId != null)
+            if (seriesCategoryId != null)
             {
                 foreach (var item in seriesCategoryBySerisId)
                 {
@@ -241,30 +236,87 @@ namespace Netflix.WebAdmin.Controllers
             return RedirectToAction("List");
         }
 
+
         public IActionResult Detail(int Id)
         {
-            var series = _seriesService.GetById(Id);
+            var seriesCategories = _seriesService.GetCategoriesBySeriesId(Id);
+
 
             var chapters = _chapterService.GetListBySeriesId(Id);
 
             var seasons = _seasonService.GetbySeriesId(Id);
-            SeriesDetailViewModel seriesDetailViewModel = new SeriesDetailViewModel()
-            {
-                Series=series,
-                Seasons=seasons,
-                Chapters=chapters
-            };
+
+           
+            SeriesDetailViewModel seriesDetailViewModel = new SeriesDetailViewModel();
+
+            seriesDetailViewModel.Series = seriesCategories.Series;
+
+            seriesDetailViewModel.CategoryList = seriesCategories.Categories;
+
+            seriesDetailViewModel.Seasons = seasons;
+
+            seriesDetailViewModel.Chapters = chapters;
+
+
 
             return View(seriesDetailViewModel);
         }
 
-        public IActionResult Delete (int Id)
+
+
+        [HttpPost]
+        //Sezon Post with modalpopup
+        public IActionResult Detail(SeriesDetailViewModel seriesDetailViewModel, int Id)
+        {
+            SeriesCategoryComplexType seriesCategories = _seriesService.GetCategoriesBySeriesId(Id);
+
+            Season season = new Season()
+            {
+                SeriesId = seriesCategories.Series.Id,
+
+                Name = seriesDetailViewModel.Season.Name,
+
+                Title = seriesDetailViewModel.Season.Title
+            };
+
+            _seasonService.Add(season);
+
+            List<Season> seasons = _seasonService.GetAllSeasonsForSeries(Id);
+
+            seriesDetailViewModel.Series = seriesCategories.Series;
+
+            seriesDetailViewModel.CategoryList = seriesCategories.Categories;
+
+            seriesDetailViewModel.Seasons = seasons;
+
+            seriesDetailViewModel.Chapters = _chapterService.GetListBySeriesId(Id);
+
+
+            return View("Detail", seriesDetailViewModel);
+        }
+
+
+
+        public IActionResult Delete(int Id)
         {
             _seriesService.Delete(Id);
+
             return RedirectToAction("List");
         }
 
-        
+
+
+        public IActionResult DeleteSeason(int id)
+        {
+            int Id = _seasonService.GetSeriesBySeasonId(id);
+            
+
+            _seasonService.Delete(id);
+
+            return RedirectToAction("Detail",new { Id });
+        }
+
+
 
     }
 }

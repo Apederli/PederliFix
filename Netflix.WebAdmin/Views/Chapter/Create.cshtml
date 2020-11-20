@@ -1,0 +1,35 @@
+﻿@model ChapterCreateViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<form asp-action="Create" asp-controller="Chapter" asp-route-id="@Model.ChapterId" method="post">
+
+    <input asp-for="Chapter.Name" type="text" value="" />
+    <input asp-for="Chapter.SeasonId" type="text" value="" />
+    @*<select asp-for="Chapter.SeasonId" asp-items="@Model.SeasonSelectList" class="form-control"></select>*@
+    <input type="submit" name="name" value="" />
+</form>
+
+<h1>Create Chapter</h1>
+@*<form asp-action="Create" asp-controller="Chapter" asp-route-id="@Model.ChapterId" method="post">
+        <div class="row">
+            <div class="col-mmd-12">
+                <input asp-for="Series.Id" type="hidden" value="" />
+                <div class="form-group">
+                    <h4>Sezon</h4>
+                    <select asp-for="Chapter.SeasonId" asp-items="@Model.Seasons" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <h4>Bölüm</h4>
+                    <select asp-for="Chapter.Name" asp-items="@Model.selectChapter" class="form-control"></select>
+                    <h4><label asp-for="Chapter.Topic"></label></h4>
+                    <input asp-for="Chapter.Topic" type="text" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <input value="Create" type="submit" />
+    </form>*@

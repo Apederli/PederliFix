@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Netflix.Entities;
 using System.Collections.Generic;
-using System.Text;
-using Netflix.Entities;
 
 namespace Netflix.Bussiness.Abstract
 {

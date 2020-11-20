@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.EntityFrameworkCore.Internal;
-using Netflix.Bussiness.Abstract;
+﻿using Netflix.Bussiness.Abstract;
 using Netflix.DataAccess.Abstract;
 using Netflix.Entities;
+using System;
+using System.Collections.Generic;
 
 namespace Netflix.Bussiness.Concrete
 {
@@ -26,7 +23,7 @@ namespace Netflix.Bussiness.Concrete
 
         public void Delete(int id)
         {
-            var resul=_moviesCategoryDal.Get(x=>x.Id==id);
+            var resul = _moviesCategoryDal.Get(x => x.Id == id);
             _moviesCategoryDal.Delete(resul);
         }
 
@@ -47,7 +44,7 @@ namespace Netflix.Bussiness.Concrete
 
         public List<MoviesCategory> GetByMovieId(int id)
         {
-            return _moviesCategoryDal.GetList(x => x.Id==id);
+            return _moviesCategoryDal.GetList(x => x.Id == id);
         }
 
         public void Update(MoviesCategory movie)

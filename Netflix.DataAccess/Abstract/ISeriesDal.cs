@@ -1,12 +1,11 @@
 ﻿using Netflix.Core.DataAccess;
 using Netflix.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Netflix.Entities.ComplexTypes;
 
 namespace Netflix.DataAccess.Abstract
 {
     public interface ISeriesDal : IEntityRepository<Series>
     {
+        SeriesCategoryComplexType GetCategoriesBySeriesId(int Id);
     }
 }

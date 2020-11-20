@@ -1,14 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Netflix.Core.Entities;
-using System;
+﻿using Netflix.Core.Entities;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-using System.Xml;
 
 namespace Netflix.Entities
 {
-    public class Movie :IEntity
+    public class Movie : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

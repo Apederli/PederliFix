@@ -1,15 +1,15 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Netflix.Bussiness.Abstract;
 using Netflix.WebApp.Models;
 using Netflix.WebApp.ViewModel;
+using System.Diagnostics;
 
 namespace Netflix.WebApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ISeriesService _seriesService;
-        public HomeController(ISeriesService seriesService )
+        public HomeController(ISeriesService seriesService)
         {
             _seriesService = seriesService;
         }

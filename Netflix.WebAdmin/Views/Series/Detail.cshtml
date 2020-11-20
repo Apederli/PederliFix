@@ -3,20 +3,91 @@
 @{
     ViewData["Title"] = "Detail";
 }
-
+<link href="/css/SeriesDetailPage.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <div class="row">
-    <div class="col-md-4">
-        <img width="100" height="100" src="~/images/Series/@Model.Series.Banner"/>
+
+    <div class="col-md-3">
+        <img width="200" height="200" src="~/images/Series/@Model.Series.Banner" />
+    </div>
+    <div class="col-md-5">
+        <ul>
+            <li><h4>@Model.Series.Name</h4></li>
+            <li>@Model.Series.Summary</li>
+        </ul>
     </div>
     <div class="col-md-4">
-      <tr>
-          <th>@Model.Series.Name</th>
-          <th>@Model.Series.Summary</th>
-      </tr>
+        <ul>
+            @foreach (var item in Model.CategoryList)
+            {
+                <li>@item.CategoryName</li>
+            }
+        </ul>
     </div>
 </div>
 
+<div style="margin-top:10px;">
+    <input type="button" data-toggle="modal" data-target="#myModal" value="Yeni Sezon Ekle" class="btn btn-outline-success" />
+    <a asp-controller="Chapter" asp-action="Create" asp-route-Id="@Model.Series.Id" class="btn btn-outline-secondary">Yeni Bölüm Ekle</a>
+</div>
 
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color:red;">YENİ SEZON</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form asp-action="Detail">
+                <div class="modal-body">
+                    <label asp-for="Season.Name"></label>
+                    <select asp-for="Season.Name" asp-items="@( new SelectList(Model.selectSeason,"","Text"))" class="form-control"></select>
+                    <label asp-for="Season.Title"></label>
+                    <input type="text" class="form-control" asp-for="Season.Title" />
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Save" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<div class="col-md-12" ">
+    <div class="row">
+        <h4>Seasons</h4>
+        @foreach (var season in Model.Seasons)
+        {
+            <div class="seasonBox" style="margin:5px">
+                <h5 style="display:inline-block; float:left;">@season.Name</h5>
+                <label style="margin-left:10px;">@season.Title</label>
+                <span style="float:right; color:red; font-style:oblique;">
+                    <a href="/Series/DeleteSeason/@season.Id"><i title="Edit" class="fas fa-trash-alt" style="color:coral"></i></a>
+                </span>
+                <div class="row">
+                    @foreach (var chapter in Model.Chapters)
+                    {
+                        if (chapter.SeasonId == season.Id)
+                        {
+                            <div class="chapterBox">
+                                <a href="#"><span>@chapter.Name</span></a>
+                            </div>
+                        }
+
+                    }
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
+<br />
 <div>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a>

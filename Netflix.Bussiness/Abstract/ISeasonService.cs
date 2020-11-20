@@ -1,16 +1,23 @@
 ﻿using Netflix.Entities;
-using System;
+using Netflix.Entities.ComplexTypes;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Netflix.Bussiness.Abstract
 {
     public interface ISeasonService
     {
-
         Season Add(Season season);
-        void Delete(int id);
 
+        int GetSeriesBySeasonId(int id);
+
+        Season AddToCahpter(SeasonChapterComplexType seasonChapterComplexType);
+        
+        void Delete(int id);
+        
+        Season GetById(int id);
+        
         List<Season> GetbySeriesId(int id);
+
+        List<Season> GetAllSeasonsForSeries(int seriesId);
     }
 }

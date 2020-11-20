@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Netflix.Core.Entities;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace Netflix.Entities
 {
@@ -16,6 +14,6 @@ namespace Netflix.Entities
         public string Banner { get; set; }
         public ICollection<SeriesCategory> SeriesCategory { get; set; }
         [NotMapped]
-        public IFormFile FormFile  { get; set; }
+        public IFormFile FormFile { get; set; }
     }
 }

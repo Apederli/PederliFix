@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Netflix.DataAccess.Abstract;
-using Netflix.Entities;
+﻿using Netflix.Entities;
 using Netflix.Entities.ComplexTypes;
+using System.Collections.Generic;
 
 namespace Netflix.Bussiness.Abstract
 {
@@ -15,7 +12,7 @@ namespace Netflix.Bussiness.Abstract
         void Delete(int id);
         Category GetById(int id);
 
-        MovieCategoryComplexType GetListByCategoryId(int ?id);
+        MovieCategoryComplexType GetListByCategoryId(int? id);
 
         SeriesCategoryComplexType GetListSeriesByCategoryId(int? id);
     }

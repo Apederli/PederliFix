@@ -9,7 +9,7 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
 {
     public class EfCategoryDal : EfEntityRepositoryBase<Category, NetflixContext>, ICategoryDal
     {
-        public MovieCategoryComplexType GetListByCategoryId(int ?id)
+        public MovieCategoryComplexType GetListByCategoryId(int? id)
         {
             using (NetflixContext db = new NetflixContext())
             {
@@ -28,7 +28,7 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
 
                 return movieCategoryComplexType;
             }
-          
+
         }
 
         public SeriesCategoryComplexType GetListSeriesByCategoryId(int? id)
@@ -39,14 +39,14 @@ namespace Netflix.DataAccess.Concrete.EntityFreamwork
                     .Select(cat => new { Category = cat, Series = cat.SeriesCategory.Select(x => x.Series) }).FirstOrDefault();
                 SeriesCategoryComplexType seriesCategoryComplex = new SeriesCategoryComplexType();
 
-                if(data != null)
+                if (data != null)
                 {
                     seriesCategoryComplex.Category = data.Category;
                     seriesCategoryComplex.Serieses = data.Series;
                 }
 
                 return seriesCategoryComplex;
-                
+
             }
         }
     }
